@@ -392,6 +392,31 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
   .dp-diag{overflow-x:auto;margin-inline:-18px;padding-inline:18px}
   .dp-diag svg{min-width:540px}
 }
+
+/* inputs: six slots, three open */
+.sw-in{background:var(--dp-node);box-shadow:inset 0 0 0 1px var(--dp-ink3)}
+.sw-open{background:transparent;box-shadow:none;border:1.5px dashed var(--dp-ink3);box-sizing:border-box}
+.dp-slots{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.dp-slots li{position:relative;display:flex;flex-direction:column;gap:3px;min-height:86px;padding:10px 11px;border-radius:4px;transition:opacity .45s ease,transform .45s ease,border-color .3s ease,box-shadow .3s ease;transition-delay:calc(var(--i)*90ms),calc(var(--i)*90ms),0s,0s}
+.dp-slots li.on{background:var(--dp-node);border:1px solid var(--dp-line)}
+.dp-slots li.open{border:1.5px dashed var(--dp-ink3);background:transparent}
+.dp-slots li.sel{border-color:var(--dp-hance);box-shadow:inset 0 0 0 1px var(--dp-hance)}
+.dp-slots em{font:700 10px/1 var(--sans);letter-spacing:.14em;color:var(--dp-ink3);font-style:normal}
+.dp-slots b{font:700 14px/1.25 var(--serif);color:var(--dp-ink)}
+.dp-slots li.open b{color:var(--dp-ink2)}
+.dp-slots span{font:400 12px/1.35 var(--sans);color:var(--dp-ink3);margin-top:auto}
+.pre .dp-slots li{opacity:0;transform:translateY(8px)}
+.dp-io-out{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:6px;color:var(--dp-ink3)}
+.dp-io-out svg{width:22px;height:14px}
+.dp-io-bar{align-self:stretch;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 12px;border-radius:4px;background:var(--dp-tile);color:#F9F5F2}
+.dp-io-bar .k{font:700 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#B0ABAB}
+.dp-io-now{font:700 13px/1.2 var(--sans);font-variant-numeric:tabular-nums;text-align:right}
+@media (max-width: 640px){
+  .dp-slots{gap:6px}
+  .dp-slots li{min-height:92px;padding:9px}
+  .dp-slots b{font-size:13px}
+  .dp-slots span{font-size:11px}
+}
 /* dp:css:end */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
@@ -592,6 +617,7 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
           <h3>Modernity</h3>
           <p>This isn’t an experimental standard. It doesn’t try to push the boundaries of what’s possible in AV, and that’s deliberate. It isn’t what faculty are asking us for.</p>
           <p>They’re asking for rooms with a clean, modern, predictable interface that works the same way in every building where they teach. And they’re asking for features like Zoom and annotation, which have been table stakes at other colleges and universities for years. So the standard uses proven, widely deployed products and puts them in the same place, with the same controls, in every room.</p>
+          <p>Consistency can’t come at the cost of flexibility. Most rooms start with three inputs: the podium computer, a connection for the instructor’s own laptop and the Zoom Rooms appliance. The standard leaves headroom for three more, like a document camera, a Blu-ray player or whatever other source the pedagogy and the syllabus call for. Technology shouldn’t drive room selection in CatSched, where faculty submit their classroom preferences. Every standard classroom in the inventory should be able to adapt to each instructor’s technology needs.</p>
           <p>Zoom will be with us for a long time. Last fall the college signed a five-year agreement with Zoom with the option to renew for five more, up to ten years in all. Unlimited Zoom Rooms were part of the deal, which makes Zoom Rooms a no-cost campus service. Every room that moves to the standard can run as a Zoom Room without adding a license or a bill-back.</p>
         </div>
         <div class="dp-figs">
@@ -599,6 +625,13 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
             <p class="dp-lbl">The same controls in every room</p>
             <div class="dp-rooms" aria-hidden="true"><div class="dp-mini" style="--i:0"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:1"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:2"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:3"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:4"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:5"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div></div>
             <figcaption class="dp-cap">Every room that moves to the standard gets the same controller layout, the same help button and the same ways to connect.</figcaption>
+          </figure>
+          <figure class="dp-fig" data-anim="inputs">
+            <p class="dp-lbl">Six inputs, three left open</p>
+            <ul class="dp-legend"><li><i class="sw-in"></i>Standard in every room</li><li><i class="sw-open"></i>Headroom for the course</li></ul>
+            <ul class="dp-slots"><li class="on sel" style="--i:0"><em>IN 1</em><b>Podium computer</b><span>In every room</span></li><li class="on" style="--i:1"><em>IN 2</em><b>Instructor’s laptop</b><span>Bring your own device</span></li><li class="on" style="--i:2"><em>IN 3</em><b>Zoom Rooms appliance</b><span>In every room</span></li><li class="open" style="--i:3"><em>IN 4</em><b>Document camera</b><span>Open</span></li><li class="open" style="--i:4"><em>IN 5</em><b>Blu-ray player</b><span>Open</span></li><li class="open" style="--i:5"><em>IN 6</em><b>What the syllabus needs</b><span>Open</span></li></ul>
+            <div class="dp-io-out"><svg viewBox="0 0 24 14" aria-hidden="true"><path d="M12 1v10M6 6l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><div class="dp-io-bar"><span class="k">Projector</span><span class="dp-io-now" aria-hidden="true">IN 1 · Podium computer</span></div></div>
+            <figcaption class="dp-cap">In Chambers 2146, two three-input E5200 encoders give the room six inputs, and the Tap routes any of them to the projector.</figcaption>
           </figure>
           <figure class="dp-fig" data-anim="zoom">
             <p class="dp-lbl">Our Zoom agreement</p>
@@ -1425,6 +1458,24 @@ main().catch(err => { console.error(err); fail('The 3D model could not load. The
     }
     requestAnimationFrame(step);
   }
+
+  // Input router: step the highlighted source while the figure is on screen
+  (function () {
+    var fig = dp.querySelector('[data-anim=inputs]');
+    if (!fig || reduce || !('IntersectionObserver' in window)) return;
+    var slots = fig.querySelectorAll('.dp-slots li'), now = fig.querySelector('.dp-io-now'), i = 1, timer = null;
+    function step() {
+      slots.forEach(function (s, k) { s.classList.toggle('sel', k === i); });
+      now.textContent = 'IN ' + (i + 1) + ' · ' + slots[i].querySelector('b').textContent;
+      i = (i + 1) % slots.length;
+    }
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && !timer) { timer = setInterval(step, 1800); }
+        else if (!e.isIntersecting && timer) { clearInterval(timer); timer = null; }
+      });
+    }, { threshold: 0.4 }).observe(fig);
+  })();
 
   // Chart hover / focus tooltip
   var chart = dp.querySelector('.dp-chart');
