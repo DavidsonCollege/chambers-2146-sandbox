@@ -225,6 +225,145 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
   .essay p{font-size:17px}
   .specs div{grid-template-columns:92px minmax(0,1fr)}
 }
+/* dp:css:start - design philosophy band */
+:root{
+  --dp-bg:#E9DED3; --dp-line:#CDBDAE; --dp-grid:#D3C5B7;
+  --dp-ink:#0F1012; --dp-ink2:#4A484A; --dp-ink3:#5C595A;
+  --dp-hance:#D42121; --dp-other:#4F74B3; --dp-tile:#24262B; --dp-tile-btn:#3A3D44;
+  --dp-ok:#4F74B3; --dp-fault:#D42121; --dp-node:#F4EDE6; --dp-part:#A7B8D6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --dp-bg:#1B1816; --dp-line:#3A332D; --dp-grid:#342E29;
+    --dp-ink:#F9F5F2; --dp-ink2:#D4CFCE; --dp-ink3:#B0ABAB;
+    --dp-hance:#E5484D; --dp-other:#5F86CF; --dp-tile:#2C2E33; --dp-tile-btn:#44474F;
+    --dp-ok:#5F86CF; --dp-fault:#E5484D; --dp-node:#221E1B; --dp-part:#4B6699;
+  }
+}
+:root[data-theme="dark"]{
+  --dp-bg:#1B1816; --dp-line:#3A332D; --dp-grid:#342E29;
+  --dp-ink:#F9F5F2; --dp-ink2:#D4CFCE; --dp-ink3:#B0ABAB;
+  --dp-hance:#E5484D; --dp-other:#5F86CF; --dp-tile:#2C2E33; --dp-tile-btn:#44474F;
+  --dp-ok:#5F86CF; --dp-fault:#E5484D; --dp-node:#221E1B; --dp-part:#4B6699;
+}
+.dp{grid-column:1/-1;background:var(--dp-bg);color:var(--dp-ink);border-top:3px solid var(--red);padding:56px clamp(20px,4.5vw,64px) 60px;margin-bottom:44px}
+.dp-head{max-width:62ch}
+.dp-head h2{margin-top:10px}
+.dp-dek{font:400 clamp(17px,1.5vw,20px)/1.55 var(--serif);color:var(--dp-ink2);margin:14px 0 0}
+.dp-pillar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:40px 64px;margin-top:52px;padding-top:40px;border-top:1px solid var(--dp-line)}
+.dp-text h3{font:700 clamp(26px,2.6vw,34px)/1.1 var(--serif);margin:0 0 16px;text-wrap:balance}
+.dp-text p{font:400 18px/1.66 var(--serif);margin:0 0 16px;max-width:56ch}
+.dp-text p:last-child{margin-bottom:0}
+.dp-figs{display:flex;flex-direction:column;gap:34px;min-width:0}
+.dp-fig{margin:0;min-width:0}
+.dp-lbl{font:700 10.5px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--dp-ink3);margin:0 0 12px}
+.dp-cap{font:400 13px/1.5 var(--sans);color:var(--dp-ink3);margin:10px 0 0;max-width:62ch}
+
+/* 47 -> 0 */
+.dp-duel{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;align-items:start}
+.dp-stat .n{display:block;font:700 clamp(56px,7vw,84px)/.9 var(--sans);letter-spacing:-.02em;color:var(--dp-ink)}
+.dp-stat .t{display:block;font:700 12px/1.35 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--dp-ink2);margin-top:10px}
+.dp-stat .s{display:block;font:400 13px/1.45 var(--sans);color:var(--dp-ink3);margin-top:4px}
+.dp-arrow{align-self:center;width:40px;height:16px;color:var(--dp-ink3);margin-top:-30px}
+.dp-dots{display:grid;grid-template-columns:repeat(12,9px);gap:3px;margin-top:14px}
+.dp-dots i{display:block;width:9px;height:9px;background:var(--dp-hance);border-radius:2px;transition:opacity .25s ease,transform .3s ease;transition-delay:calc(var(--i)*18ms)}
+.dp-zero{margin-top:14px;height:45px;display:flex;align-items:center;gap:10px;font:700 12px/1.3 var(--sans);color:var(--dp-ink2)}
+.dp-zero svg{width:22px;height:22px;flex:none}
+.dp-zero path{stroke:var(--dp-other);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:26;stroke-dashoffset:0;transition:stroke-dashoffset .6s ease 1.5s}
+.pre .dp-dots i{opacity:0;transform:scale(.2)}
+.pre .dp-zero path{stroke-dashoffset:26}
+
+/* chart */
+.dp-legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 10px;padding:0;list-style:none;font:400 12.5px/1.3 var(--sans);color:var(--dp-ink2)}
+.dp-legend li{display:flex;align-items:center;gap:7px}
+.dp-legend i{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw-h{background:var(--dp-hance)} .sw-o{background:var(--dp-other)} .sw-p{background:var(--dp-part)}
+.dp-chart{position:relative}
+.dp-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.dp-chart .grid{stroke:var(--dp-grid);stroke-width:1}
+.dp-chart .tick{font:400 11px var(--sans);fill:var(--dp-ink3);font-variant-numeric:tabular-nums}
+.dp-chart .xl{font:400 11.5px var(--sans);fill:var(--dp-ink2)}
+.dp-chart .vl{font:700 12px var(--sans);fill:var(--dp-ink);font-variant-numeric:tabular-nums}
+.dp-chart .h{fill:var(--dp-hance)} .dp-chart .o{fill:var(--dp-other)} .dp-chart .p{fill:var(--dp-part)}
+.dp-col{transform-box:view-box;transform-origin:0 222px;transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i)*90ms)}
+.pre .dp-col{transform:scaleY(0)}
+.dp-chart .hit{fill:transparent;cursor:default;outline:none}
+.dp-chart .hit:focus-visible{stroke:var(--focus);stroke-width:2}
+.dp-col.hot rect,.dp-col.hot path{filter:brightness(1.08)}
+.dp-tip{position:absolute;pointer-events:none;background:var(--tip-bg);color:var(--tip-text);font:400 12px/1.45 var(--sans);padding:8px 10px;white-space:nowrap;z-index:3;transform:translate(-50%,calc(-100% - 10px))}
+.dp-tip b{display:block;font-weight:700}
+.dp-tip i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+.dp-table{margin-top:10px;font:400 13px/1.4 var(--sans);color:var(--dp-ink2)}
+.dp-table summary{cursor:pointer;font-weight:700;color:var(--dp-ink2);width:max-content}
+.dp-table .tw{overflow-x:auto}
+.dp-table table{border-collapse:collapse;margin-top:8px;min-width:420px;font-variant-numeric:tabular-nums}
+.dp-table th,.dp-table td{padding:6px 12px 6px 0;text-align:right;border-bottom:1px solid var(--dp-line)}
+.dp-table th:first-child,.dp-table td:first-child{text-align:left}
+.dp-table th{font:700 10.5px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dp-ink3)}
+
+/* diagram */
+.dp-diag svg{display:block;width:100%;height:auto}
+.dp-diag .box{fill:var(--dp-node);stroke:var(--dp-line);stroke-width:1}
+.dp-diag .bt{font:700 12.5px var(--sans);fill:var(--dp-ink)}
+.dp-diag .bs{font:400 11px var(--sans);fill:var(--dp-ink3)}
+.dp-diag .net{fill:var(--dp-grid)}
+.dp-diag .nl{font:700 10px var(--sans);letter-spacing:.14em;fill:var(--dp-ink3)}
+.dp-diag .wire{stroke:var(--dp-line);stroke-width:1.5}
+.dp-diag .ping{stroke:var(--dp-ok);stroke-width:2;stroke-dasharray:3 7;fill:none;animation:dp-flowup 1.4s linear infinite}
+.dp-diag .stream{stroke:var(--dp-ink2);stroke-width:3;stroke-dasharray:8 6;fill:none;animation:dp-flow 1s linear infinite}
+.dp-diag .alert{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:6 6;fill:none;opacity:0;animation:dp-alert 7s ease-in-out infinite}
+.dp-diag .fault{fill:var(--dp-fault);opacity:0;animation:dp-fault 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.dp-diag .ok{fill:var(--dp-ok)}
+.dp-diag .techring{fill:none;stroke:var(--dp-fault);stroke-width:2;opacity:0;animation:dp-tech 7s ease-in-out infinite}
+.dp-diag .pingbad{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:3 7;fill:none;opacity:0;animation:dp-flowup 1.4s linear infinite,dp-bad 7s ease-in-out infinite}
+@keyframes dp-flowup{to{stroke-dashoffset:-20}}
+@keyframes dp-flow{to{stroke-dashoffset:-28}}
+@keyframes dp-fault{0%,30%{opacity:0;transform:scale(.4)}36%,78%{opacity:1;transform:scale(1)}86%,100%{opacity:0;transform:scale(.4)}}
+@keyframes dp-bad{0%,32%{opacity:0}38%,78%{opacity:1}84%,100%{opacity:0}}
+@keyframes dp-alert{0%,42%{opacity:0;stroke-dashoffset:0}48%,78%{opacity:1}78%{stroke-dashoffset:-60}84%,100%{opacity:0;stroke-dashoffset:-72}}
+@keyframes dp-tech{0%,52%{opacity:0}58%,80%{opacity:1}86%,100%{opacity:0}}
+.dp-steps{list-style:none;counter-reset:s;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.dp-steps li{counter-increment:s;font:400 13px/1.45 var(--sans);color:var(--dp-ink2);border-top:1px solid var(--dp-line);padding-top:10px}
+.dp-steps li::before{content:counter(s);display:block;font:700 12px/1 var(--sans);color:var(--dp-ink);margin-bottom:6px}
+
+/* modernity: identical rooms */
+.dp-rooms{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.dp-mini{background:var(--dp-tile);border-radius:6px;padding:7px;aspect-ratio:1/.8;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr 5px;gap:4px;transition:opacity .45s ease,transform .45s ease;transition-delay:calc(var(--i)*110ms)}
+.dp-mini b{background:var(--dp-tile-btn);border-radius:2px}
+.dp-mini b:first-child{background:var(--red);animation:dp-sync 3.2s ease-in-out infinite}
+.dp-mini u{grid-column:1/-1;background:var(--dp-tile-btn);border-radius:3px;position:relative;overflow:hidden}
+.dp-mini u::after{content:"";position:absolute;inset:0 45% 0 0;background:#B0ABAB;border-radius:3px}
+.pre .dp-mini{opacity:0;transform:translateY(10px)}
+@keyframes dp-sync{0%,62%,100%{filter:none;box-shadow:none}72%{filter:brightness(1.35);box-shadow:0 0 0 2px rgba(255,255,255,.5)}}
+.dp-rooms-l{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:6px;font:400 10.5px/1.2 var(--sans);color:var(--dp-ink3);text-align:center}
+
+/* modernity: asks */
+.dp-asks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.dp-asks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--dp-line)}
+.dp-asks svg{width:20px;height:20px;margin-top:1px}
+.dp-asks path{stroke:var(--dp-other);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:26;stroke-dashoffset:0;transition:stroke-dashoffset .5s ease;transition-delay:calc(var(--i)*140ms + 150ms)}
+.pre .dp-asks path{stroke-dashoffset:26}
+.dp-asks strong{display:block;font:700 15px/1.3 var(--serif);color:var(--dp-ink)}
+.dp-asks span{display:block;font:400 13px/1.45 var(--sans);color:var(--dp-ink3);margin-top:2px}
+
+@media (max-width: 920px){
+  .dp-pillar{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width: 640px){
+  .dp{padding:40px 18px 44px;margin-bottom:28px}
+  .dp-text p{font-size:17px}
+  .dp-duel{grid-template-columns:1fr;gap:26px}
+  .dp-arrow{display:none}
+  .dp-steps{grid-template-columns:1fr;gap:10px}
+  .dp-rooms,.dp-rooms-l{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dp-asks{grid-template-columns:1fr}
+  .dp-chart .tick,.dp-chart .xl{font-size:17px}
+  .dp-chart .vl{font-size:18px}
+  .dp-chart .sofar{display:none}
+  .dp-diag{overflow-x:auto;margin-inline:-18px;padding-inline:18px}
+  .dp-diag svg{min-width:540px}
+}
+/* dp:css:end */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
@@ -311,6 +450,129 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
   </section>
 
   <section class="section" id="philosophy" aria-labelledby="h-phil">
+<!-- dp:start -->
+    <div class="dp" id="design-philosophy" aria-labelledby="h-dp">
+      <div class="dp-head">
+        <p class="eyebrow">Classroom AV standard</p>
+        <h2 id="h-dp">Design philosophy</h2>
+        <p class="dp-dek">Two ideas drive the standard. Rooms have to work every time, and they have to feel like modern classrooms.</p>
+      </div>
+
+      <div class="dp-pillar">
+        <div class="dp-text">
+          <h3>Reliability</h3>
+          <p>Classroom emergencies are our longest-running problem in classroom AV. When a room fails in the middle of class, the instructor presses the help button, a technician heads across campus, and the class loses time it doesn’t get back. Since fall 2023, our classrooms have logged 2,440 classroom emergency tickets across six semesters, roughly 400 a semester.</p>
+          <p>Hance Auditorium logged more than any other room. Last spring it averaged more than one emergency every other school day: 47 in 70 class days, nearly twice the next room on the list. This summer we rebuilt Hance on an early version of this standard. Through the first 23 class days of the fall semester, it hasn’t had a single one.</p>
+          <p>Better equipment is part of that. Visibility is the other part. Q-SYS Reflect watches every device in the system in real time and alerts us when one drops offline or reports a fault, often before anyone walks into the room. Video runs over AV over IP, so every encoder and decoder is a device on the network that we can check and manage remotely. Instead of tracing a signal through a chain of HDMI extenders and switchers, a technician can see which device failed and start fixing it right away.</p>
+        </div>
+        <div class="dp-figs">
+          <figure class="dp-fig" data-anim="count">
+            <p class="dp-lbl">Hance Auditorium classroom emergencies</p>
+            <div class="dp-duel">
+              <div class="dp-stat"><span class="n">47</span><span class="t">Spring 2026</span><span class="s">70 class days, before the refresh</span><div class="dp-dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i><i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i><i style="--i:28"></i><i style="--i:29"></i><i style="--i:30"></i><i style="--i:31"></i><i style="--i:32"></i><i style="--i:33"></i><i style="--i:34"></i><i style="--i:35"></i><i style="--i:36"></i><i style="--i:37"></i><i style="--i:38"></i><i style="--i:39"></i><i style="--i:40"></i><i style="--i:41"></i><i style="--i:42"></i><i style="--i:43"></i><i style="--i:44"></i><i style="--i:45"></i><i style="--i:46"></i></div></div>
+              <svg class="dp-arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M2 8h34M29 2l7 6-7 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              <div class="dp-stat"><span class="n" data-count="47">0</span><span class="t">Fall 2026 so far</span><span class="s">23 class days, through Sept. 25</span><div class="dp-zero"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6"/></svg>No emergencies</div></div>
+            </div>
+          </figure>
+
+          <figure class="dp-fig" data-anim="chart">
+            <p class="dp-lbl">Classroom emergency tickets by semester</p>
+            <ul class="dp-legend"><li><i class="sw-h"></i>Hance Auditorium</li><li><i class="sw-o"></i>All other classrooms</li><li><i class="sw-p"></i>Fall 2026 so far</li></ul>
+            <div class="dp-chart"><svg viewBox="0 0 600 252" role="group" aria-label="Classroom emergency tickets by semester, all rooms, with Hance Auditorium shown separately">
+<line class="grid" x1="44" x2="596" y1="222" y2="222"/>
+<text class="tick" x="36" y="226" text-anchor="end">0</text>
+<line class="grid" x1="44" x2="596" y1="162.6" y2="162.6"/>
+<text class="tick" x="36" y="166.6" text-anchor="end">200</text>
+<line class="grid" x1="44" x2="596" y1="103.1" y2="103.1"/>
+<text class="tick" x="36" y="107.1" text-anchor="end">400</text>
+<line class="grid" x1="44" x2="596" y1="43.7" y2="43.7"/>
+<text class="tick" x="36" y="47.7" text-anchor="end">600</text>
+<g class="dp-col" style="--i:0"><rect class="h" x="71.4" y="220" width="24" height="2"/><path class="o" d="M71.4,218V148.4A4,4 0 0 1 75.4,144.4H91.4A4,4 0 0 1 95.4,148.4V218Z"/></g>
+<text class="xl" x="83.4" y="240" text-anchor="middle">Fall ’23</text>
+<rect class="hit" tabindex="0" x="44" y="14" width="78.9" height="234" data-i="0" data-l="Fall 2023" data-t="261" data-h="5" data-p="0" aria-label="Fall 2023: 261 tickets, Hance Auditorium 5, other classrooms 256"/>
+<g class="dp-col" style="--i:1"><rect class="h" x="150.3" y="209.5" width="24" height="12.5"/><path class="o" d="M150.3,207.5V137.5A4,4 0 0 1 154.3,133.5H170.3A4,4 0 0 1 174.3,137.5V207.5Z"/></g>
+<text class="xl" x="162.3" y="240" text-anchor="middle">Spr ’24</text>
+<rect class="hit" tabindex="0" x="122.9" y="14" width="78.9" height="234" data-i="1" data-l="Spring 2024" data-t="298" data-h="42" data-p="0" aria-label="Spring 2024: 298 tickets, Hance Auditorium 42, other classrooms 256"/>
+<g class="dp-col" style="--i:2"><rect class="h" x="229.1" y="197.3" width="24" height="24.7"/><path class="o" d="M229.1,195.3V30.2A4,4 0 0 1 233.1,26.2H249.1A4,4 0 0 1 253.1,30.2V195.3Z"/></g>
+<text class="vl" x="241.1" y="18.2" text-anchor="middle">659</text>
+<text class="xl" x="241.1" y="240" text-anchor="middle">Fall ’24</text>
+<rect class="hit" tabindex="0" x="201.7" y="14" width="78.9" height="234" data-i="2" data-l="Fall 2024" data-t="659" data-h="83" data-p="0" aria-label="Fall 2024: 659 tickets, Hance Auditorium 83, other classrooms 576"/>
+<g class="dp-col" style="--i:3"><rect class="h" x="308" y="214.9" width="24" height="7.1"/><path class="o" d="M308,212.9V84.9A4,4 0 0 1 312,80.9H328A4,4 0 0 1 332,84.9V212.9Z"/></g>
+<text class="xl" x="320" y="240" text-anchor="middle">Spr ’25</text>
+<rect class="hit" tabindex="0" x="280.6" y="14" width="78.9" height="234" data-i="3" data-l="Spring 2025" data-t="475" data-h="24" data-p="0" aria-label="Spring 2025: 475 tickets, Hance Auditorium 24, other classrooms 451"/>
+<g class="dp-col" style="--i:4"><rect class="h" x="386.9" y="215.2" width="24" height="6.8"/><path class="o" d="M386.9,213.2V139.5A4,4 0 0 1 390.9,135.5H406.9A4,4 0 0 1 410.9,139.5V213.2Z"/></g>
+<text class="xl" x="398.9" y="240" text-anchor="middle">Fall ’25</text>
+<rect class="hit" tabindex="0" x="359.4" y="14" width="78.9" height="234" data-i="4" data-l="Fall 2025" data-t="291" data-h="23" data-p="0" aria-label="Fall 2025: 291 tickets, Hance Auditorium 23, other classrooms 268"/>
+<g class="dp-col" style="--i:5"><rect class="h" x="465.7" y="208" width="24" height="14"/><path class="o" d="M465.7,206V90.5A4,4 0 0 1 469.7,86.5H485.7A4,4 0 0 1 489.7,90.5V206Z"/></g>
+<text class="vl" x="477.7" y="78.5" text-anchor="middle">456</text>
+<text class="xl" x="477.7" y="240" text-anchor="middle">Spr ’26</text>
+<rect class="hit" tabindex="0" x="438.3" y="14" width="78.9" height="234" data-i="5" data-l="Spring 2026" data-t="456" data-h="47" data-p="0" aria-label="Spring 2026: 456 tickets, Hance Auditorium 47, other classrooms 409"/>
+<g class="dp-col" style="--i:6"><path class="p" d="M544.6,222V161.2A4,4 0 0 1 548.6,157.2H564.6A4,4 0 0 1 568.6,161.2V222Z"/></g>
+<text class="vl" x="556.6" y="149.2" text-anchor="middle">218<tspan class=sofar> so far</tspan></text>
+<text class="xl" x="556.6" y="240" text-anchor="middle">Fall ’26</text>
+<rect class="hit" tabindex="0" x="517.1" y="14" width="78.9" height="234" data-i="6" data-l="Fall 2026, through Sept. 25" data-t="218" data-h="0" data-p="1" aria-label="Fall 2026, through Sept. 25: 218 tickets, Hance Auditorium 0, other classrooms 218"/>
+</svg><div class="dp-tip" hidden></div></div>
+            <details class="dp-table"><summary>Show the numbers</summary><div class="tw"><table><thead><tr><th>Semester</th><th>All rooms</th><th>Hance</th><th>Other rooms</th></tr></thead><tbody><tr><td>Fall 2023</td><td>261</td><td>5</td><td>256</td></tr><tr><td>Spring 2024</td><td>298</td><td>42</td><td>256</td></tr><tr><td>Fall 2024</td><td>659</td><td>83</td><td>576</td></tr><tr><td>Spring 2025</td><td>475</td><td>24</td><td>451</td></tr><tr><td>Fall 2025</td><td>291</td><td>23</td><td>268</td></tr><tr><td>Spring 2026</td><td>456</td><td>47</td><td>409</td></tr><tr><td>Fall 2026, through Sept. 25</td><td>218</td><td>0</td><td>218</td></tr></tbody></table></div></details>
+            <figcaption class="dp-cap">Source: T&amp;I Zendesk tickets titled Classroom Emergency. Counts include repeat calls about the same incident. Semesters run August to December and January to May.</figcaption>
+          </figure>
+
+          <figure class="dp-fig">
+            <p class="dp-lbl">How a fault gets found</p>
+            <div class="dp-diag"><svg viewBox="0 0 600 226" role="img" aria-labelledby="dp-diag-t dp-diag-d">
+<title id="dp-diag-t">How a fault gets found</title>
+<desc id="dp-diag-d">Every device in the room reports its health over the campus network to Q-SYS Reflect. When the projector's decoder reports a fault, Reflect alerts an AV technician. Video travels from the lectern encoder to the projector decoder as a network stream.</desc>
+<rect class="box" x="24" y="12" width="196" height="50" rx="3"/>
+<text class="bt" x="38" y="33">Q-SYS Reflect</text><text class="bs" x="38" y="50">Monitoring and alerts</text>
+<rect class="box" x="380" y="12" width="196" height="50" rx="3"/>
+<rect class="techring" x="377" y="9" width="202" height="56" rx="5"/>
+<text class="bt" x="394" y="33">AV technician</text><text class="bs" x="394" y="50">Alert on a phone or laptop</text>
+<path class="alert" d="M222,37H378"/>
+<line class="wire" x1="122" y1="62" x2="122" y2="112"/>
+<path class="ping" d="M122,112V64"/>
+<text class="nl" x="24" y="104">CAMPUS NETWORK</text>
+<text class="nl" x="442" y="104" text-anchor="middle">VIDEO STREAM</text>
+<rect class="net" x="24" y="112" width="552" height="8" rx="4"/>
+<path class="stream" d="M371,116H513"/>
+<g>
+<line class="wire" x1="87" y1="164" x2="87" y2="120"/><path class="ping" d="M87,164V122"/>
+<line class="wire" x1="229" y1="164" x2="229" y2="120"/><path class="ping" d="M229,164V122"/>
+<line class="wire" x1="371" y1="164" x2="371" y2="120"/><path class="ping" d="M371,164V122"/>
+<line class="wire" x1="513" y1="164" x2="513" y2="120"/><path class="ping" d="M513,164V122"/><path class="pingbad" d="M513,164V122"/>
+</g>
+<rect class="box" x="24" y="164" width="126" height="52" rx="3"/><text class="bt" x="36" y="186">Tap IP</text><text class="bs" x="36" y="203">Room controller</text><circle class="ok" cx="138" cy="176" r="4"/>
+<rect class="box" x="166" y="164" width="126" height="52" rx="3"/><text class="bt" x="178" y="186">Core 8 Flex</text><text class="bs" x="178" y="203">Audio processor</text><circle class="ok" cx="280" cy="176" r="4"/>
+<rect class="box" x="308" y="164" width="126" height="52" rx="3"/><text class="bt" x="320" y="186">E5200 encoder</text><text class="bs" x="320" y="203">Lectern inputs</text><circle class="ok" cx="422" cy="176" r="4"/>
+<rect class="box" x="450" y="164" width="126" height="52" rx="3"/><text class="bt" x="462" y="186">D5000 decoder</text><text class="bs" x="462" y="203">At the projector</text><circle class="ok" cx="564" cy="176" r="4"/><circle class="fault" cx="564" cy="176" r="5.5"/>
+</svg></div>
+            <ol class="dp-steps">
+              <li>Every device reports its health over the campus network.</li>
+              <li>Q-SYS Reflect sends an alert when something drops offline or reports a fault.</li>
+              <li>A technician sees exactly which device failed and can start on it remotely.</li>
+            </ol>
+          </figure>
+        </div>
+      </div>
+
+      <div class="dp-pillar">
+        <div class="dp-text">
+          <h3>Modernity</h3>
+          <p>This isn’t an experimental standard. It doesn’t try to push the boundaries of what’s possible in AV, and that’s deliberate. It isn’t what faculty are asking us for.</p>
+          <p>They’re asking for rooms with a clean, modern, predictable interface that works the same way in every building where they teach. And they’re asking for features like Zoom and annotation, which have been table stakes at other colleges and universities for years. So the standard uses proven, widely deployed products and puts them in the same place, with the same controls, in every room.</p>
+        </div>
+        <div class="dp-figs">
+          <figure class="dp-fig" data-anim="rooms">
+            <p class="dp-lbl">The same controls in every room</p>
+            <div class="dp-rooms" aria-hidden="true"><div class="dp-mini" style="--i:0"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:1"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:2"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:3"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:4"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:5"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div></div>
+            <figcaption class="dp-cap">Every room that moves to the standard gets the same controller layout, the same help button and the same ways to connect.</figcaption>
+          </figure>
+          <figure class="dp-fig" data-anim="asks">
+            <p class="dp-lbl">What faculty are asking for</p>
+            <ul class="dp-asks"><li style="--i:0"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>Zoom in every room</strong><span>Bring in a guest speaker or a remote student without extra gear.</span></div></li><li style="--i:1"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>Annotation</strong><span>Mark up slides right on the lectern display.</span></div></li><li style="--i:2"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>Wireless sharing</strong><span>Share a laptop screen through Zoom, with no drivers to install.</span></div></li><li style="--i:3"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>One cable for laptops</strong><span>A single USB-C connection for picture, data and charging.</span></div></li><li style="--i:4"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>Lecture capture</strong><span>Recording that the instructor starts and stops.</span></div></li><li style="--i:5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><div><strong>The same controls everywhere</strong><span>One layout and one help button, in the same place in every room.</span></div></li></ul>
+          </figure>
+        </div>
+      </div>
+    </div>
+<!-- dp:end -->
     <div>
       <h2 id="h-phil">Why this room</h2>
       <p class="s-dek">The thinking behind the new classroom AV standard and the sandbox room.</p>
@@ -1072,5 +1334,78 @@ function frame(now) {
 main().catch(err => { console.error(err); fail('The 3D model could not load. The renders further down show the same room.'); });
 </script>
 
+<script id="dp-js">
+(function () {
+  var dp = document.querySelector('.dp');
+  if (!dp) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll-in motion: figures rest in their final state; only ones that start below the fold are reset and replayed.
+  var figs = dp.querySelectorAll('[data-anim]');
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        // two frames so the reset state paints before the transition starts
+        requestAnimationFrame(function () { requestAnimationFrame(function () { play(e.target); }); });
+      });
+    }, { threshold: 0.3 });
+    figs.forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight * 0.92) {
+        el.classList.add('pre');
+        var c = el.querySelector('[data-count]');
+        if (c) c.textContent = c.getAttribute('data-count');
+        io.observe(el);
+      }
+    });
+  }
+  function play(el) {
+    el.classList.remove('pre');
+    var c = el.querySelector('[data-count]');
+    if (c) countDown(c, +c.getAttribute('data-count'));
+  }
+  function countDown(node, from) {
+    var t0 = null, dur = 1500;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+      node.textContent = String(Math.round(from * (1 - eased)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Chart hover / focus tooltip
+  var chart = dp.querySelector('.dp-chart');
+  if (!chart) return;
+  var tip = chart.querySelector('.dp-tip');
+  var cols = chart.querySelectorAll('.dp-col');
+  function fmt(n) { return Number(n).toLocaleString('en-US'); }
+  function show(h) {
+    var t = +h.dataset.t, hn = +h.dataset.h, part = h.dataset.p === '1';
+    tip.innerHTML = '<b>' + h.dataset.l + '</b>' + fmt(t) + ' tickets' + (part ? ' so far' : '') +
+      '<br><i style="background:var(--dp-hance)"></i>Hance ' + fmt(hn) +
+      '<br><i style="background:var(' + (part ? '--dp-part' : '--dp-other') + ')"></i>Other rooms ' + fmt(t - hn);
+    var svg = chart.querySelector('svg'), sb = svg.getBoundingClientRect(), cb = chart.getBoundingClientRect();
+    var vb = svg.viewBox.baseVal, sx = sb.width / vb.width, sy = sb.height / vb.height;
+    var x = +h.getAttribute('x') + +h.getAttribute('width') / 2;
+    var col = cols[+h.dataset.i], bb = col.getBBox();
+    tip.hidden = false;
+    var half = tip.offsetWidth / 2, px = sb.left - cb.left + x * sx;
+    tip.style.left = Math.max(half, Math.min(chart.clientWidth - half, px)) + 'px';
+    tip.style.top = (sb.top - cb.top + bb.y * sy - (h.dataset.l === 'Fall 2024' ? 6 : 16)) + 'px';
+    cols.forEach(function (c, i) { c.classList.toggle('hot', i === +h.dataset.i); });
+  }
+  function hide() { tip.hidden = true; cols.forEach(function (c) { c.classList.remove('hot'); }); }
+  chart.querySelectorAll('.hit').forEach(function (h) {
+    h.addEventListener('pointerenter', function () { show(h); });
+    h.addEventListener('pointerleave', hide);
+    h.addEventListener('focus', function () { show(h); });
+    h.addEventListener('blur', hide);
+  });
+})();
+
+</script>
 </body>
 </html>
