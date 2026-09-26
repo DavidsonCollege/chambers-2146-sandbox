@@ -1,0 +1,2179 @@
+{
+ "Annotation_Monitor_21in_Touch": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "monitor",
+  "off": [
+   0.0,
+   0.9652,
+   0.15239999999999998
+  ],
+  "center": [
+   6.2992,
+   1.29989,
+   -6.35545
+  ],
+  "size": [
+   0.4953,
+   0.2908,
+   0.139
+  ]
+ },
+ "Annotation_Monitor_Image": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "monitor",
+  "off": [
+   0.0,
+   0.9652,
+   0.15239999999999998
+  ],
+  "center": [
+   6.2992,
+   1.3094,
+   -6.37415
+  ],
+  "size": [
+   0.4763,
+   0.2518,
+   0.0917
+  ]
+ },
+ "Bin_Liner_Drape": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.50165,
+   0.51816,
+   -5.6134
+  ],
+  "size": [
+   0.0076,
+   0.4267,
+   0.254
+  ]
+ },
+ "Bin_Recycling_BlueLid": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.2921,
+   0.381,
+   -6.2103
+  ],
+  "size": [
+   0.4166,
+   0.762,
+   0.5182
+  ]
+ },
+ "Bin_Small_Beige": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.1905,
+   0.1905,
+   -6.7437
+  ],
+  "size": [
+   0.2896,
+   0.381,
+   0.3658
+  ]
+ },
+ "Bin_Trash_GreenLiner": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.2921,
+   0.381,
+   -5.6515
+  ],
+  "size": [
+   0.4166,
+   0.762,
+   0.5182
+  ]
+ },
+ "Ceiling_ACT_2x2": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   2.75272,
+   -4.16814
+  ],
+  "size": [
+   6.9875,
+   0.019,
+   8.3363
+  ]
+ },
+ "Ceiling_Projector": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.048,
+   2.5781,
+   -3.59537
+  ],
+  "size": [
+   0.4064,
+   0.3302,
+   0.3632
+  ]
+ },
+ "Ceiling_T-Bar_Grid": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   2.74066,
+   -4.16814
+  ],
+  "size": [
+   6.9875,
+   0.0051,
+   8.3363
+  ]
+ },
+ "Chief_K1D120_Arm_Reduced_Height": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "monitor",
+  "off": [
+   0.0,
+   0.9652,
+   0.15239999999999998
+  ],
+  "center": [
+   6.35918,
+   1.13238,
+   -6.32587
+  ],
+  "size": [
+   0.1645,
+   0.3547,
+   0.1245
+  ]
+ },
+ "Column_Enclosure_SE": {
+  "zone": "wall_E",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.84657,
+   1.3716,
+   -1.10871
+  ],
+  "size": [
+   0.2819,
+   2.7432,
+   0.4496
+  ]
+ },
+ "Column_Enclosure_SW": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.14478,
+   1.3716,
+   -1.10871
+  ],
+  "size": [
+   0.2896,
+   2.7432,
+   0.4496
+  ]
+ },
+ "Corridor_2CE1_Shell": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -1.40208,
+   1.5875,
+   -8.6995
+  ],
+  "size": [
+   2.8042,
+   3.2258,
+   5.2578
+  ]
+ },
+ "Corridor_Clock": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -2.60858,
+   2.0701,
+   -9.7028
+  ],
+  "size": [
+   0.0457,
+   0.3302,
+   0.3302
+  ]
+ },
+ "Cove_Base_Column_SE": {
+  "zone": "wall_E",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.84339,
+   0.0508,
+   -1.10871
+  ],
+  "size": [
+   0.2883,
+   0.1016,
+   0.4623
+  ]
+ },
+ "Cove_Base_Column_SW": {
+  "zone": "wall_W",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.14796,
+   0.0508,
+   -1.10871
+  ],
+  "size": [
+   0.2959,
+   0.1016,
+   0.4623
+  ]
+ },
+ "Cove_Base_East": {
+  "zone": "wall_N",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.98436,
+   0.0508,
+   -4.16814
+  ],
+  "size": [
+   0.0063,
+   0.1016,
+   8.3363
+  ]
+ },
+ "Cove_Base_North": {
+  "zone": "wall_N",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   0.0508,
+   -8.33311
+  ],
+  "size": [
+   6.9875,
+   0.1016,
+   0.0063
+  ]
+ },
+ "Cove_Base_South": {
+  "zone": "wall_E",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   0.0508,
+   -0.00317
+  ],
+  "size": [
+   6.9875,
+   0.1016,
+   0.0063
+  ]
+ },
+ "Cove_Base_West": {
+  "zone": "wall_N",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.00317,
+   0.0508,
+   -4.16814
+  ],
+  "size": [
+   0.0063,
+   0.1016,
+   8.3363
+  ]
+ },
+ "Door_Frame_West": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -0.07557,
+   1.0922,
+   -7.73811
+  ],
+  "size": [
+   0.1689,
+   2.1844,
+   1.0084
+  ]
+ },
+ "Door_Leaf_West": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.43838,
+   1.06553,
+   -8.15395
+  ],
+  "size": [
+   0.9077,
+   2.1057,
+   0.1471
+  ]
+ },
+ "Downlight_1": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.778,
+   2.73875,
+   -7.9248
+  ],
+  "size": [
+   0.1829,
+   0.0089,
+   0.1829
+  ]
+ },
+ "Downlight_2": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.9972,
+   2.73875,
+   -7.9248
+  ],
+  "size": [
+   0.1829,
+   0.0089,
+   0.1829
+  ]
+ },
+ "Downlight_3": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.6068,
+   2.73875,
+   -7.9248
+  ],
+  "size": [
+   0.1829,
+   0.0089,
+   0.1829
+  ]
+ },
+ "Downlight_4": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.826,
+   2.73875,
+   -7.9248
+  ],
+  "size": [
+   0.1829,
+   0.0089,
+   0.1829
+  ]
+ },
+ "Floor_Carpet": {
+  "zone": "floor",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   -0.0127,
+   -4.16814
+  ],
+  "size": [
+   6.9875,
+   0.0254,
+   8.3363
+  ]
+ },
+ "Guest_Chair_Black": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.9652,
+   0.43214,
+   -4.6736
+  ],
+  "size": [
+   0.6004,
+   0.8643,
+   0.5926
+  ]
+ },
+ "Heckler_Body_H920C-BG": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.9436,
+   0.96406,
+   -6.65455
+  ],
+  "size": [
+   1.0312,
+   0.1552,
+   0.7701
+  ]
+ },
+ "Heckler_Desktop_Lid": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "lid",
+  "off": [
+   0.0,
+   0.3302,
+   0.0
+  ],
+  "center": [
+   5.9436,
+   1.03822,
+   -6.72846
+  ],
+  "size": [
+   1.0287,
+   0.0064,
+   0.6223
+  ]
+ },
+ "Heckler_H922_Desk_Pad_Nero": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   5.9436,
+   1.04267,
+   -6.73354
+  ],
+  "size": [
+   0.9754,
+   0.0025,
+   0.4775
+  ]
+ },
+ "Heckler_H925_Bag_Hook": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "left",
+  "off": [
+   0.30479999999999996,
+   0.0,
+   0.0
+  ],
+  "center": [
+   6.48398,
+   0.9652,
+   -6.8834
+  ],
+  "size": [
+   0.0495,
+   0.061,
+   0.061
+  ]
+ },
+ "Heckler_H926_Cup_Holder": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "right",
+  "off": [
+   -0.30479999999999996,
+   0.0,
+   0.0
+  ],
+  "center": [
+   5.3721,
+   0.94869,
+   -6.8834
+  ],
+  "size": [
+   0.1118,
+   0.1397,
+   0.1041
+  ]
+ },
+ "Heckler_H930_Tap_Insert": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   5.78485,
+   1.04076,
+   -6.34238
+  ],
+  "size": [
+   0.2642,
+   0.1435,
+   0.1295
+  ]
+ },
+ "Heckler_H936_Cable_Chain": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.3119,
+   0.44767,
+   -6.42747
+  ],
+  "size": [
+   0.127,
+   0.8953,
+   0.1803
+  ]
+ },
+ "Heckler_H956_Courtesy_IO_MKII": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   6.09727,
+   1.02451,
+   -6.34238
+  ],
+  "size": [
+   0.2642,
+   0.111,
+   0.1295
+  ]
+ },
+ "Heckler_Modesty_Panel_Left_(east)_Davidson_Red": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "left",
+  "off": [
+   0.30479999999999996,
+   0.0,
+   0.0
+  ],
+  "center": [
+   6.48297,
+   0.83058,
+   -6.50494
+  ],
+  "size": [
+   0.0475,
+   0.5842,
+   0.4699
+  ]
+ },
+ "Heckler_Modesty_Panel_Rear_Davidson_Red": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rear",
+  "off": [
+   0.0,
+   0.0,
+   0.30479999999999996
+  ],
+  "center": [
+   5.9436,
+   0.83058,
+   -6.24624
+  ],
+  "size": [
+   1.0084,
+   0.5842,
+   0.0475
+  ]
+ },
+ "Heckler_Modesty_Panel_Right_(west)_Davidson_Red": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "right",
+  "off": [
+   -0.30479999999999996,
+   0.0,
+   0.0
+  ],
+  "center": [
+   5.40423,
+   0.83058,
+   -6.50494
+  ],
+  "size": [
+   0.0475,
+   0.5842,
+   0.4699
+  ]
+ },
+ "Heckler_SitStand_Base_H904_Casters": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.9436,
+   0.44323,
+   -6.68211
+  ],
+  "size": [
+   1.0389,
+   0.8865,
+   0.7658
+  ]
+ },
+ "Instructor_Task_Chair": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.81289,
+   0.4826,
+   -7.54761
+  ],
+  "size": [
+   0.5997,
+   0.9652,
+   0.6306
+  ]
+ },
+ "Keyboard_Compact_Graphite": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   6.1849,
+   1.05029,
+   -6.80974
+  ],
+  "size": [
+   0.2962,
+   0.0127,
+   0.1321
+  ]
+ },
+ "Lobby_Chair_1": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -2.31232,
+   0.43191,
+   -9.24516
+  ],
+  "size": [
+   0.7167,
+   0.8638,
+   0.7428
+  ]
+ },
+ "Lobby_Chair_2": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -2.29616,
+   0.43191,
+   -10.0076
+  ],
+  "size": [
+   0.5588,
+   0.8638,
+   0.5994
+  ]
+ },
+ "Logitech_Rally_PTZ_A_Front_(faces_students)": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.6548,
+   2.57482,
+   -7.21614
+  ],
+  "size": [
+   0.1534,
+   0.3368,
+   0.1534
+  ]
+ },
+ "Logitech_Rally_PTZ_B_Rear_(faces_instructor)": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.826,
+   2.57492,
+   -0.51054
+  ],
+  "size": [
+   0.1534,
+   0.3365,
+   0.1534
+  ]
+ },
+ "Logitech_Tap_IP": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   5.78485,
+   1.09266,
+   -6.34622
+  ],
+  "size": [
+   0.2461,
+   0.0865,
+   0.1643
+  ]
+ },
+ "MacBook_Display_Image": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   5.65899,
+   1.15532,
+   -6.68394
+  ],
+  "size": [
+   0.2896,
+   0.1699,
+   0.0619
+  ]
+ },
+ "MacBook_Pro_14": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   5.65912,
+   1.15432,
+   -6.7887
+  ],
+  "size": [
+   0.3127,
+   0.2208,
+   0.3017
+  ]
+ },
+ "MagSafe_Cable": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   5.9808,
+   1.04402,
+   -6.31442
+  ],
+  "size": [
+   0.0383,
+   0.0819,
+   0.0248
+  ]
+ },
+ "MagSafe_Qi_Charger": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   6.02742,
+   1.08255,
+   -6.3246
+  ],
+  "size": [
+   0.0559,
+   0.0061,
+   0.0559
+  ]
+ },
+ "Mouse_Graphite": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   5.96138,
+   1.04902,
+   -6.80974
+  ],
+  "size": [
+   0.066,
+   0.0381,
+   0.1168
+  ]
+ },
+ "Occupancy_Sensor": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.4356,
+   2.72796,
+   -7.2136
+  ],
+  "size": [
+   0.1016,
+   0.0305,
+   0.1016
+  ]
+ },
+ "Projection_Screen_Deployed": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49758,
+   1.83261,
+   -8.13054
+  ],
+  "size": [
+   2.479,
+   1.8059,
+   0.0356
+  ]
+ },
+ "Projection_Screen_Housing_Recessed": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49758,
+   2.73939,
+   -8.13943
+  ],
+  "size": [
+   2.5248,
+   0.0076,
+   0.1397
+  ]
+ },
+ "Projection_Screen_Image": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49758,
+   1.79387,
+   -8.13562
+  ],
+  "size": [
+   2.4079,
+   1.505,
+   0.0
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_1": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.3876,
+   2.74034,
+   -1.12014
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_2": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.2164,
+   2.74034,
+   -1.12014
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_3": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.3876,
+   2.74034,
+   -2.94894
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_4": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.2164,
+   2.74034,
+   -2.94894
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_5": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.3876,
+   2.74034,
+   -4.77774
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "QSC_AD-C6T-ZB_Speaker_6": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.2164,
+   2.74034,
+   -4.77774
+  ],
+  "size": [
+   0.2799,
+   0.0057,
+   0.2799
+  ]
+ },
+ "Rack_Logitech_RoomMate": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   6.10032,
+   0.91262,
+   -6.68452
+  ],
+  "size": [
+   0.161,
+   0.0345,
+   0.2118
+  ]
+ },
+ "Rack_Power_Strip": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   6.31825,
+   0.9144,
+   -6.75678
+  ],
+  "size": [
+   0.1905,
+   0.0381,
+   0.0516
+  ]
+ },
+ "Rack_QSC_Core_8_Flex": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   5.60654,
+   0.91719,
+   -6.72224
+  ],
+  "size": [
+   0.22,
+   0.0437,
+   0.2873
+  ]
+ },
+ "Rack_QSC_SPA2-200_Amp": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   5.60705,
+   0.96063,
+   -6.74535
+  ],
+  "size": [
+   0.221,
+   0.0432,
+   0.2421
+  ]
+ },
+ "Rack_SCT_USB-PDI-100": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   6.26504,
+   0.90513,
+   -6.63118
+  ],
+  "size": [
+   0.0739,
+   0.0196,
+   0.1052
+  ]
+ },
+ "Rack_Streamline_Control_Box_1": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   6.09981,
+   0.94132,
+   -6.65277
+  ],
+  "size": [
+   0.1346,
+   0.0229,
+   0.1179
+  ]
+ },
+ "Rack_Streamline_Control_Box_2": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   6.09981,
+   0.96418,
+   -6.65277
+  ],
+  "size": [
+   0.1346,
+   0.0229,
+   0.1179
+  ]
+ },
+ "Rack_VS_E5200_Encoder_1": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   5.82613,
+   0.90932,
+   -6.6915
+  ],
+  "size": [
+   0.1461,
+   0.0279,
+   0.2258
+  ]
+ },
+ "Rack_VS_E5200_Encoder_2": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "rack",
+  "off": [
+   0.0,
+   0.1651,
+   0.0
+  ],
+  "center": [
+   5.82613,
+   0.93726,
+   -6.6915
+  ],
+  "size": [
+   0.1461,
+   0.0279,
+   0.2258
+  ]
+ },
+ "Return_Grille_2x2": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.826,
+   2.73812,
+   -4.7752
+  ],
+  "size": [
+   0.5842,
+   0.0102,
+   0.5842
+  ]
+ },
+ "Sennheiser_TCCM_Ceiling_Mic": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.6068,
+   2.75311,
+   -6.60654
+  ],
+  "size": [
+   0.6066,
+   0.0259,
+   0.6066
+  ]
+ },
+ "Smoke_Detector": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.6068,
+   2.72288,
+   -5.9944
+  ],
+  "size": [
+   0.1321,
+   0.0406,
+   0.1321
+  ]
+ },
+ "Supply_Diffuser_2x2": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.778,
+   2.72479,
+   -5.9944
+  ],
+  "size": [
+   0.5588,
+   0.0368,
+   0.5588
+  ]
+ },
+ "Table_West_72x24": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.4064,
+   0.48895,
+   -4.318
+  ],
+  "size": [
+   0.6096,
+   0.9779,
+   1.8288
+  ]
+ },
+ "TabletChair_01": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.27547,
+   0.42702,
+   -5.33214
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_02": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.39307,
+   0.42702,
+   -5.33214
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_03": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.51067,
+   0.42702,
+   -5.33214
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_04": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.62827,
+   0.42702,
+   -5.33214
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_05": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.74587,
+   0.42702,
+   -5.33214
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_06": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.27547,
+   0.42702,
+   -4.31614
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_07": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.39307,
+   0.42702,
+   -4.31614
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_08": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.51067,
+   0.42702,
+   -4.31614
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_09": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.62827,
+   0.42702,
+   -4.31614
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_10": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.74587,
+   0.42702,
+   -4.31614
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_11": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.27547,
+   0.42702,
+   -3.30014
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_12": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.39307,
+   0.42702,
+   -3.30014
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_13": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.51067,
+   0.42702,
+   -3.30014
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_14": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.62827,
+   0.42702,
+   -3.30014
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_15": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.74587,
+   0.42702,
+   -3.30014
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_16": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.27547,
+   0.42702,
+   -2.28414
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_17": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   2.39307,
+   0.42702,
+   -2.28414
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_18": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.51067,
+   0.42702,
+   -2.28414
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_19": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   4.62827,
+   0.42702,
+   -2.28414
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "TabletChair_20": {
+  "zone": "furn",
+  "furn": true,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.74587,
+   0.42702,
+   -2.28414
+  ],
+  "size": [
+   0.691,
+   0.854,
+   0.7759
+  ]
+ },
+ "Tap_IP_Screen": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "inserts",
+  "off": [
+   0.0,
+   1.016,
+   0.0508
+  ],
+  "center": [
+   5.78485,
+   1.10417,
+   -6.34436
+  ],
+  "size": [
+   0.2174,
+   0.055,
+   0.1246
+  ]
+ },
+ "Troffer_2x4_1": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.4732,
+   2.73329,
+   -1.7272
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "Troffer_2x4_2": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.1308,
+   2.73329,
+   -1.7272
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "Troffer_2x4_3": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.4732,
+   2.73329,
+   -4.1656
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "Troffer_2x4_4": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.1308,
+   2.73329,
+   -4.1656
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "Troffer_2x4_5": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   1.4732,
+   2.73329,
+   -6.604
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "Troffer_2x4_6": {
+  "zone": "ceil",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   5.1308,
+   2.73329,
+   -6.604
+  ],
+  "size": [
+   1.2192,
+   0.0198,
+   0.6096
+  ]
+ },
+ "USB-C_Cable_to_Rear_Pathway": {
+  "zone": "furn",
+  "furn": true,
+  "keep": true,
+  "xg": "desk",
+  "off": [
+   0.0,
+   0.6095999999999999,
+   -0.0508
+  ],
+  "center": [
+   5.51161,
+   1.02253,
+   -6.60121
+  ],
+  "size": [
+   0.068,
+   0.0646,
+   0.3905
+  ]
+ },
+ "VS_D5000_Decoder_at_Projector": {
+  "zone": "ceil_av",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.17246,
+   2.72224,
+   -3.5814
+  ],
+  "size": [
+   0.1219,
+   0.0292,
+   0.1295
+  ]
+ },
+ "Wall_Devices_E_4": {
+  "zone": "wall_E",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.98373,
+   1.33985,
+   -7.76732
+  ],
+  "size": [
+   0.0076,
+   0.1143,
+   0.066
+  ]
+ },
+ "Wall_Devices_W_0": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.00381,
+   1.49225,
+   -6.8961
+  ],
+  "size": [
+   0.0076,
+   0.1143,
+   0.066
+  ]
+ },
+ "Wall_Devices_W_1": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.00381,
+   1.04775,
+   -6.96468
+  ],
+  "size": [
+   0.0076,
+   0.0889,
+   0.1118
+  ]
+ },
+ "Wall_Devices_W_2": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.00381,
+   1.35255,
+   -5.41782
+  ],
+  "size": [
+   0.0076,
+   0.1143,
+   0.066
+  ]
+ },
+ "Wall_Devices_W_3": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.04572,
+   1.35255,
+   -7.23265
+  ],
+  "size": [
+   0.0914,
+   0.2667,
+   0.1143
+  ]
+ },
+ "Wall_East_(to_2CE3)": {
+  "zone": "wall_E",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   7.06374,
+   1.6002,
+   -4.16814
+  ],
+  "size": [
+   0.1524,
+   3.2004,
+   8.3363
+  ]
+ },
+ "Wall_North_(whiteboard_wall,_to_2CE2)": {
+  "zone": "wall_N",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   1.6002,
+   -8.41248
+  ],
+  "size": [
+   7.2923,
+   3.2004,
+   0.1524
+  ]
+ },
+ "Wall_South_(to_2130)": {
+  "zone": "wall_S",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   1.6002,
+   0.0762
+  ],
+  "size": [
+   7.2923,
+   3.2004,
+   0.1524
+  ]
+ },
+ "Wall_West_(to_2CE1,_door)": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   -0.0762,
+   1.6002,
+   -4.16814
+  ],
+  "size": [
+   0.1524,
+   3.2004,
+   8.3363
+  ]
+ },
+ "Whiteboard_3-Panel": {
+  "zone": "wall_N",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.49377,
+   1.46812,
+   -8.29818
+  ],
+  "size": [
+   4.8133,
+   1.3818,
+   0.0762
+  ]
+ },
+ "Whiteboard_East_Wall": {
+  "zone": "wall_E",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.94944,
+   1.43637,
+   -3.7592
+  ],
+  "size": [
+   0.0762,
+   1.3183,
+   4.2723
+  ]
+ },
+ "Whiteboard_East_Wall_Surface": {
+  "zone": "wall_E",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   6.96798,
+   1.4732,
+   -3.7592
+  ],
+  "size": [
+   0.0,
+   1.1938,
+   4.2164
+  ]
+ },
+ "Whiteboard_South_Wall": {
+  "zone": "wall_S",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.4925,
+   1.43637,
+   -0.0381
+  ],
+  "size": [
+   4.7041,
+   1.3183,
+   0.0762
+  ]
+ },
+ "Whiteboard_South_Wall_Surface": {
+  "zone": "wall_S",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   3.4925,
+   1.4732,
+   -0.01956
+  ],
+  "size": [
+   4.6482,
+   1.1938,
+   0.0
+  ]
+ },
+ "Whiteboard_West_Wall": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.0381,
+   1.43637,
+   -3.4036
+  ],
+  "size": [
+   0.0762,
+   1.3183,
+   3.6627
+  ]
+ },
+ "Whiteboard_West_Wall_Surface": {
+  "zone": "wall_W",
+  "furn": false,
+  "keep": false,
+  "xg": null,
+  "off": null,
+  "center": [
+   0.01956,
+   1.4732,
+   -3.4036
+  ],
+  "size": [
+   0.0,
+   1.1938,
+   3.6068
+  ]
+ }
+}

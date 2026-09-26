@@ -1,0 +1,263 @@
+{
+ "CAM_Lectern_Audience_3-4": {
+  "type": "PERSP",
+  "lens": 35.0,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.019999999552965164,
+  "clip_end": 100.0,
+  "res": [
+   2016,
+   1512
+  ],
+  "position": [
+   3.4036,
+   1.524,
+   -3.6068
+  ],
+  "quaternion": [
+   -0.0855,
+   -0.342168,
+   -0.031282,
+   0.935218
+  ],
+  "target": [
+   5.61813,
+   0.89128,
+   -6.22808
+  ],
+  "hit": "Heckler_Modesty_Panel_Rear_Davidson_Red",
+  "hit_dist": 3.489
+ },
+ "CAM_Lectern_Detail": {
+  "type": "PERSP",
+  "lens": 26.0,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.019999999552965164,
+  "clip_end": 100.0,
+  "res": [
+   2016,
+   1512
+  ],
+  "position": [
+   5.8928,
+   1.7272,
+   -7.7216
+  ],
+  "quaternion": [
+   -0.007408,
+   -0.970939,
+   -0.237284,
+   0.030312
+  ],
+  "target": [
+   5.97495,
+   1.04259,
+   -6.40715
+  ],
+  "hit": "Heckler_H956_Courtesy_IO_MKII",
+  "hit_dist": 1.484
+ },
+ "CAM_Lectern_Detail_3-4": {
+  "type": "PERSP",
+  "lens": 30.0,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.019999999552965164,
+  "clip_end": 100.0,
+  "res": [
+   2016,
+   1512
+  ],
+  "position": [
+   5.08,
+   1.8034,
+   -7.62
+  ],
+  "quaternion": [
+   -0.081205,
+   -0.910464,
+   -0.215023,
+   0.343841
+  ],
+  "target": [
+   6.08693,
+   1.0414,
+   -6.477
+  ],
+  "hit": "Heckler_Desktop_Lid",
+  "hit_dist": 1.703
+ },
+ "CAM_Photo_Match_IMG_3298": {
+  "type": "PERSP",
+  "lens": 14.5625,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.05000000074505806,
+  "clip_end": 100.0,
+  "res": [
+   2016,
+   1512
+  ],
+  "position": [
+   5.92074,
+   1.51867,
+   -2.99491
+  ],
+  "quaternion": [
+   -0.095173,
+   0.250483,
+   0.00804,
+   0.963398
+  ],
+  "target": [
+   3.03414,
+   0.39422,
+   -8.13332
+  ],
+  "hit": "Wall_North_(whiteboard_wall,_to_2CE2)",
+  "hit_dist": 6.237
+ },
+ "CAM_RallyA_POV_(Zoom_self-view)": {
+  "type": "PERSP",
+  "lens": 20.5,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.019999999552965164,
+  "clip_end": 100.0,
+  "res": [
+   1920,
+   1080
+  ],
+  "position": [
+   6.60751,
+   2.44171,
+   -7.16416
+  ],
+  "quaternion": [
+   -0.054737,
+   0.921858,
+   0.141506,
+   0.356593
+  ],
+  "target": [
+   2.75572,
+   0.6421,
+   -2.93035
+  ],
+  "hit": "TabletChair_17",
+  "hit_dist": 6.69
+ },
+ "CAM_RallyB_POV": {
+  "type": "PERSP",
+  "lens": 30.0,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "HORIZONTAL",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 6.0,
+  "clip_start": 0.019999999552965164,
+  "clip_end": 100.0,
+  "res": [
+   1920,
+   1080
+  ],
+  "position": [
+   4.83708,
+   2.45299,
+   -0.58256
+  ],
+  "quaternion": [
+   -0.073338,
+   -0.076073,
+   -0.005611,
+   0.994386
+  ],
+  "target": [
+   5.73989,
+   1.57275,
+   -6.44857
+  ],
+  "hit": "Wall_North_(whiteboard_wall,_to_2CE2)",
+  "hit_dist": 7.931
+ },
+ "CAM_RCP_Ortho_Up": {
+  "type": "ORTHO",
+  "lens": 50.0,
+  "sensor_width": 36.0,
+  "sensor_height": 24.0,
+  "sensor_fit": "AUTO",
+  "shift_x": 0.0,
+  "shift_y": 0.0,
+  "ortho_scale": 9.352279663085938,
+  "clip_start": 0.10000000149011612,
+  "clip_end": 1000.0,
+  "res": [
+   1400,
+   1600
+  ],
+  "position": [
+   3.49377,
+   0.3048,
+   -4.16814
+  ],
+  "quaternion": [
+   0.707107,
+   0.0,
+   0.0,
+   0.707107
+  ],
+  "target": [
+   3.49377,
+   2.9048,
+   -4.16814
+  ],
+  "hit": "Ceiling_ACT_2x2",
+  "hit_dist": 2.6
+ },
+ "CAM_Exploded": {
+  "type": "PERSP",
+  "lens": 58,
+  "sensor_width": 36,
+  "sensor_height": 24,
+  "sensor_fit": "AUTO",
+  "shift_x": 0,
+  "shift_y": 0,
+  "res": [
+   1500,
+   1500
+  ],
+  "position": [
+   7.7216,
+   3.0988,
+   -11.3538
+  ],
+  "target": [
+   5.8928,
+   1.1684,
+   -6.5024
+  ]
+ }
+}
