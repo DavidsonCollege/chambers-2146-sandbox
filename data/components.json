@@ -1,384 +1,987 @@
 {
-  "_about": "Component facts for the Chambers 2146 viewer. Sourced only from products/products.json and the card text in content/make_breakout.py. 'objects' are Blender object-name prefixes (userData.bn in the GLB). 'tt' lists the objects shown in the turntable.",
-  "groups": [
-    {"id": "lectern", "label": "On the lectern"},
-    {"id": "rack", "label": "Inside the lectern rack"},
-    {"id": "ceiling", "label": "In the ceiling"}
-  ],
-  "components": [
+ "_about": "Component facts for the Chambers 2146 viewer. Sourced only from products/products.json and the card text in content/make_breakout.py. 'objects' are Blender object-name prefixes (userData.bn in the GLB). 'tt' lists the objects shown in the turntable.",
+ "groups": [
+  {
+   "id": "lectern",
+   "label": "On the lectern"
+  },
+  {
+   "id": "rack",
+   "label": "Inside the lectern rack"
+  },
+  {
+   "id": "ceiling",
+   "label": "In the ceiling"
+  }
+ ],
+ "components": [
+  {
+   "id": "lectern",
+   "group": "lectern",
+   "name": "Heckler Lectern 4U",
+   "maker": "Heckler",
+   "model": "H920C-BG, Black Grey, on H904-BK casters",
+   "role": "Motorized sit/stand lectern. Two 2RU racks hide the AV gear under the lift-up desktop, reachable from the front and rear.",
+   "specs": [
+    [
+     "Footprint",
+     "40.6 W × 30.3 D in (1031 × 770 mm)"
+    ],
+    [
+     "Desktop height",
+     "30.1–49.7 in (765–1262 mm), 19.7 in of travel"
+    ],
+    [
+     "Storage",
+     "4RU under a lift-up desktop"
+    ],
+    [
+     "Console bays",
+     "Two, each 9.2 in (234 mm) wide, in a 5.7 in (145 mm) rear strip"
+    ],
+    [
+     "Weight and load",
+     "87 lb; 250 lb maximum load"
+    ],
+    [
+     "Finish",
+     "Black Grey powder-coated steel and aluminum"
+    ],
+    [
+     "Casters",
+     "H904-BK, set of 4; total-lock lever locks wheel and swivel; adds 1.7 in (43 mm)"
+    ]
+   ],
+   "images": [
+    "heckler_h920c",
+    "heckler_h904"
+   ],
+   "objects": [
+    "Heckler_Body_H920C-BG",
+    "Heckler_SitStand_Base_H904_Casters",
+    "Heckler_Desktop_Lid"
+   ],
+   "tt": [
+    "Heckler_Body_H920C-BG",
+    "Heckler_SitStand_Base_H904_Casters",
+    "Heckler_Desktop_Lid"
+   ],
+   "source": "heckler.com",
+   "links": [
     {
-      "id": "lectern", "group": "lectern",
-      "name": "Heckler Lectern 4U",
-      "maker": "Heckler", "model": "H920C-BG, Black Grey, on H904-BK casters",
-      "role": "Motorized sit/stand lectern. Two 2RU racks hide the AV gear under the lift-up desktop, reachable from the front and rear.",
-      "specs": [
-        ["Footprint", "40.6 W × 30.3 D in (1031 × 770 mm)"],
-        ["Desktop height", "30.1–49.7 in (765–1262 mm), 19.7 in of travel"],
-        ["Storage", "4RU under a lift-up desktop"],
-        ["Console bays", "Two, each 9.2 in (234 mm) wide, in a 5.7 in (145 mm) rear strip"],
-        ["Weight and load", "87 lb; 250 lb maximum load"],
-        ["Finish", "Black Grey powder-coated steel and aluminum"],
-        ["Casters", "H904-BK, set of 4; total-lock lever locks wheel and swivel; adds 1.7 in (43 mm)"]
-      ],
-      "images": ["heckler_h920c", "heckler_h904"],
-      "objects": ["Heckler_Body_H920C-BG", "Heckler_SitStand_Base_H904_Casters", "Heckler_Desktop_Lid"],
-      "tt": ["Heckler_Body_H920C-BG", "Heckler_SitStand_Base_H904_Casters", "Heckler_Desktop_Lid"],
-      "source": "heckler.com"
+     "label": "Heckler Lectern 4U",
+     "url": "https://heckler.com/products/heckler-lectern-4u"
     },
     {
-      "id": "panels", "group": "lectern",
-      "name": "Modesty panels, three sides",
-      "maker": "Heckler", "model": "H909-4U standard set (Heckler library code H9094U)",
-      "role": "Felt privacy panels on the audience side and both ends of the lectern. Shown here in Davidson red; the CTI quote lists Ebony.",
-      "specs": [
-        ["Audience panel", "39.7 W × 23 H × 0.4 in (1008 × 584 × 9 mm)"],
-        ["Side panels (2)", "18.5 W × 23 H × 0.4 in (470 × 584 × 9 mm)"],
-        ["Material", "FeltRight PET felt, 9 mm, 42 colors"],
-        ["Mounting", "Round button standoffs; installs without tools; hardware ships with the lectern"]
-      ],
-      "images": ["heckler_h9094u"],
-      "objects": ["Heckler_Modesty_Panel_"],
-      "tt": ["Heckler_Modesty_Panel_Rear_Davidson_Red", "Heckler_Modesty_Panel_Left_(east)_Davidson_Red", "Heckler_Modesty_Panel_Right_(west)_Davidson_Red"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "tap", "group": "lectern", "controller": true,
-      "name": "Logitech Tap IP",
-      "maker": "Logitech", "model": "Tap IP touch controller, graphite",
-      "role": "The room controller. It carries the Zoom page and a QSC control page for 6×1 video routing.",
-      "specs": [
-        ["Size", "9.69 W × 6.74 D × 2.21 H in (246.2 × 171.3 × 56.1 mm); 2.2 lb"],
-        ["Screen", "10.1 in, 1280 × 800, IPS capacitive 10-point touch"],
-        ["Connectivity", "PoE (802.3af), Ethernet, Wi-Fi, Bluetooth"],
-        ["Profile", "Wedge: tall at the back, sloping to a thin front edge"]
-      ],
-      "images": ["logitech_tap_ip"],
-      "objects": ["Logitech_Tap_IP", "Tap_IP_Screen"],
-      "tt": ["Logitech_Tap_IP", "Tap_IP_Screen"],
-      "source": "logitech.com"
-    },
-    {
-      "id": "h930", "group": "lectern",
-      "name": "Tap console insert",
-      "maker": "Heckler", "model": "H930-BK Console Insert for Logitech Tap / Tap IP",
-      "role": "A wedge-shaped cradle in one console bay that holds the Tap tilted toward the presenter.",
-      "specs": [
-        ["Fit", "One lectern console bay (about 9.2 in / 234 mm wide)"],
-        ["Install", "Without tools"],
-        ["Shipping weight", "1.5 lb"],
-        ["Note", "Tap sold separately"]
-      ],
-      "images": ["heckler_h930"],
-      "objects": ["Heckler_H930"],
-      "tt": ["Heckler_H930_Tap_Insert"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "h956", "group": "lectern",
-      "name": "Courtesy IO MKII insert",
-      "maker": "Heckler", "model": "H956-BK Console Insert, Courtesy IO MKII",
-      "role": "Four keystone expansion ports and a wireless-charging pocket, in the second console bay.",
-      "specs": [
-        ["Fit", "One lectern console bay (about 9.2 in / 234 mm wide)"],
-        ["Top", "Round recessed pocket that holds a user-supplied Apple MagSafe puck"],
-        ["Front", "Four square openings on the sloped face; two round cable notches at one end"],
-        ["Electronics", "None listed by Heckler; no built-in charger"]
-      ],
-      "images": ["heckler_h956"],
-      "objects": ["Heckler_H956"],
-      "tt": ["Heckler_H956_Courtesy_IO_MKII"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "magsafe", "group": "lectern",
-      "name": "Apple MagSafe Charger",
-      "maker": "Apple", "model": "MagSafe Charger, 1 m",
-      "role": "The charging puck that sits in the Courtesy IO pocket, which is sized for it.",
-      "specs": [
-        ["Certification", "Qi2 25W and Qi"],
-        ["Cable", "1 m braided (2 m version available)"],
-        ["Finish", "White and silver"]
-      ],
-      "images": ["qi_charger_insert"],
-      "objects": ["MagSafe_"],
-      "tt": ["MagSafe_Qi_Charger", "MagSafe_Cable"],
-      "source": "apple.com"
-    },
-    {
-      "id": "monitor", "group": "lectern",
-      "name": "Annotation display",
-      "maker": "Owner-furnished (OFE)", "model": "Display model not specified in the project sources",
-      "role": "Touch display for marking up slides. It sits low over the rear-left of the desk, below the instructor's sight line.",
-      "specs": [
-        ["Mount", "Chief K1D120BXRH desk clamp arm"]
-      ],
-      "images": [],
-      "objects": ["Annotation_"],
-      "tt": ["Annotation_Monitor_21in_Touch", "Annotation_Monitor_Image"],
-      "source": "Project breakout card"
-    },
-    {
-      "id": "chief", "group": "lectern",
-      "name": "Chief Kontour K1D desk clamp",
-      "maker": "Chief", "model": "K1D120BXRH, reduced height, black",
-      "role": "Holds the annotation display on a gas-spring arm clamped to the desk. There is no vertical pole.",
-      "specs": [
-        ["Monitor center", "3.83–16.83 in (97–427 mm) above the desk; 13 in of travel"],
-        ["Reach", "19.25 in (489 mm) maximum extension"],
-        ["Displays", "VESA 75×75 or 100×100; 5–25 lb; 10–32 in"],
-        ["Tilt", "+75° / −10°"],
-        ["Clamp", "Desks 0.5–2.5 in thick"]
-      ],
-      "images": ["chief_k1d120"],
-      "objects": ["Chief_"],
-      "tt": ["Chief_K1D120_Arm_Reduced_Height"],
-      "source": "csiergonomics.com"
-    },
-    {
-      "id": "pad", "group": "lectern",
-      "name": "Desk pad, Nero",
-      "maker": "Heckler", "model": "H922-4023 Desk Pad for Lectern 4U",
-      "role": "Matte linoleum work surface over the hinged front of the desk, in front of the console bays.",
-      "specs": [
-        ["Size", "38.4 × 18.8 × 0.1 in (976 × 477 × 2 mm)"],
-        ["Material", "Matte natural desktop linoleum; 4023 is the color Nero (black)"]
-      ],
-      "images": ["heckler_h922"],
-      "objects": ["Heckler_H922"],
-      "tt": ["Heckler_H922_Desk_Pad_Nero"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "cup", "group": "lectern",
-      "name": "Cup holder",
-      "maker": "Heckler", "model": "H926-BK",
-      "role": "Mounts to either side of the desktop body. Takes mugs, tumblers and bottles.",
-      "specs": [
-        ["Size", "4 × 4.5 × 3 in (102 × 114 × 76 mm); 1 lb"],
-        ["Material", "Black heat-resistant PETG"]
-      ],
-      "images": ["heckler_h926"],
-      "objects": ["Heckler_H926"],
-      "tt": ["Heckler_H926_Cup_Holder"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "hook", "group": "lectern",
-      "name": "Bag hook",
-      "maker": "Heckler", "model": "H925-BK",
-      "role": "Round knob-style hook on the side of the desktop body for bags, coats and assistive devices.",
-      "specs": [
-        ["Size", "2.4 × 2.4 × 2 in (60 × 60 × 51 mm); 1 lb"],
-        ["Material", "Black PLA over a steel core"]
-      ],
-      "images": ["heckler_h925"],
-      "objects": ["Heckler_H925"],
-      "tt": ["Heckler_H925_Bag_Hook"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "chain", "group": "lectern",
-      "name": "Cable management kit",
-      "maker": "Heckler", "model": "H936",
-      "role": "Vertebra-style cable chain that runs from under the desktop to the floor beside one column.",
-      "specs": [
-        ["Contents", "Cable chain, base plate, connector, mounting plate, hardware"],
-        ["Weight", "2.2 lb"],
-        ["Colors", "Black or translucent (black shown)"]
-      ],
-      "images": ["heckler_h936"],
-      "objects": ["Heckler_H936"],
-      "tt": ["Heckler_H936_Cable_Chain"],
-      "source": "heckler.com"
-    },
-    {
-      "id": "laptop", "group": "lectern",
-      "name": "Presenter laptop and peripherals",
-      "maker": "Shown for context", "model": "Instructor's own laptop, keyboard and mouse",
-      "role": "Stands in for the instructor's laptop. One USB-C cable to the Sound Control USB-PDI-100 in the rack carries video, USB and charging.",
-      "specs": [],
-      "images": [],
-      "objects": ["MacBook_", "Keyboard_", "Mouse_", "USB-C_"],
-      "tt": ["MacBook_Pro_14", "MacBook_Display_Image"],
-      "source": "Project breakout card"
-    },
-    {
-      "id": "core8", "group": "rack",
-      "name": "Q-SYS Core 8 Flex",
-      "maker": "Q-SYS (QSC)", "model": "Core 8 Flex audio processor",
-      "role": "Audio DSP and USB audio device for the Zoom Room.",
-      "specs": [
-        ["Size", "1.72 H × 8.66 W × 11.28 D in (43.6 × 220 × 286.6 mm); 1RU, half-rack width; 4.0 lb"],
-        ["Audio I/O", "8 Flex analog channels, USB audio, Dante 8×8, 64×64 Q-LAN"],
-        ["Control", "8×8 GPIO, 2× RS-232"]
-      ],
-      "images": ["qsc_core8flex"],
-      "objects": ["Rack_QSC_Core_8_Flex"],
-      "tt": ["Rack_QSC_Core_8_Flex"],
-      "source": "qsys.com"
-    },
-    {
-      "id": "spa2", "group": "rack",
-      "name": "QSC SPA2-200 amplifier",
-      "maker": "QSC", "model": "SPA2-200 two-channel amplifier",
-      "role": "Drives the six 70 V ceiling speakers.",
-      "specs": [
-        ["Size", "1.7 H × 8.7 W × 9.5 D in (43 × 220 × 241 mm); 1RU, half-rack width"],
-        ["Output", "200 W total; 4/8 Ω or 70/100 V bridged"],
-        ["Cooling", "Convection-cooled class D"],
-        ["Weight", "4.0 lb as printed (the spec sheet's 1.4 kg does not match)"]
-      ],
-      "images": ["qsc_spa2_200"],
-      "objects": ["Rack_QSC_SPA2"],
-      "tt": ["Rack_QSC_SPA2-200_Amp"],
-      "source": "qsys.com"
-    },
-    {
-      "id": "e5200", "group": "rack", "qty": 2,
-      "name": "Visionary PacketAV E5200 encoder",
-      "maker": "Visionary Solutions", "model": "PacketAV E5200",
-      "role": "Three-input AV-over-IP encoders that feed the projector's decoder.",
-      "specs": [
-        ["Size", "5.75 in wide over the flanges (body 4.80 in) × 1.1 H × 8.86 D in; 1.0 lb"],
-        ["Front", "LAN1 (PoE in), LAN2 (PoE out), HDMI out (loop), HDMI in 1, HDMI in 2, USB-C in"],
-        ["Rear", "Two 8-pin Euroblocks (audio, GPIO/RS-232), USB-B"]
-      ],
-      "images": ["vs_e5200"],
-      "objects": ["Rack_VS_E5200"],
-      "tt": ["Rack_VS_E5200_Encoder_1"],
-      "source": "visionary-av.com"
-    },
-    {
-      "id": "roommate", "group": "rack",
-      "name": "Logitech RoomMate",
-      "maker": "Logitech", "model": "RoomMate CollabOS computing appliance",
-      "role": "The Zoom Rooms appliance. It runs the Tap IP and both Rally cameras.",
-      "specs": [
-        ["Size", "6.34 W × 8.31 D × 1.36 H in (161 × 211 × 34.5 mm)"],
-        ["Ports", "2× HDMI out, 1× HDMI in, 3× USB-A 2.0, GbE, Wi-Fi"],
-        ["Mounting", "Mounting plate included"]
-      ],
-      "images": ["logitech_roommate"],
-      "objects": ["Rack_Logitech_RoomMate"],
-      "tt": ["Rack_Logitech_RoomMate"],
-      "source": "logitech.com"
-    },
-    {
-      "id": "streamline", "group": "rack", "qty": 2,
-      "name": "Rally Streamline control boxes",
-      "maker": "Logitech", "model": "Rally Camera Streamline Kit, Control Side Box",
-      "role": "Control boxes in the rack, with single-cable runs up to the two ceiling cameras.",
-      "specs": [
-        ["Control Side Box", "5.30 × 4.61 × 0.90 in"],
-        ["Link", "One Cat5e+ cable, up to 100 m, to the Camera Side Base under each camera"],
-        ["Output", "USB-C at the rack"]
-      ],
-      "images": ["logitech_rally_ptz"],
-      "objects": ["Rack_Streamline"],
-      "tt": ["Rack_Streamline_Control_Box_1"],
-      "source": "logitech.com"
-    },
-    {
-      "id": "usbpdi", "group": "rack",
-      "name": "Sound Control USB-PDI-100",
-      "maker": "Sound Control Technologies", "model": "USB-PDI 100W Power Delivery Injector",
-      "role": "One USB-C cable to the laptop carries video, USB and 100 W charging. The box breaks those out to HDMI and USB-A.",
-      "specs": [
-        ["Size", "0.77 H × 2.91 W × 4.11 D in; 0.26 lb (AV-iQ figures for the USB-PDI)"],
-        ["Front", "USB-C Power + Data, firmware button, power LED"],
-        ["Rear", "USB-C Power In, USB-A Data, HDMI Out"],
-        ["Charging", "100 W on the -100 model"]
-      ],
-      "images": ["soundcontrol_usb_pdi_100"],
-      "objects": ["Rack_SCT_USB"],
-      "tt": ["Rack_SCT_USB-PDI-100"],
-      "source": "creationnetworks.net, av-iq.com"
-    },
-    {
-      "id": "power", "group": "rack",
-      "name": "Rack power strip",
-      "maker": "Not specified", "model": "Modeled for completeness",
-      "role": "Power distribution inside the lectern rack. The project sources carry no product data for it.",
-      "specs": [],
-      "images": [],
-      "objects": ["Rack_Power_Strip"],
-      "tt": ["Rack_Power_Strip"],
-      "source": "Model only"
-    },
-    {
-      "id": "speakers", "group": "ceiling", "qty": 6, "view": "below",
-      "name": "Q-SYS AD-C6T-ZB ceiling speakers",
-      "maker": "Q-SYS (QSC)", "model": "AcousticDesign AD-C6T-ZB-WH",
-      "role": "6.5 in two-way, zero-bezel speakers on a 6 ft grid over the seating.",
-      "specs": [
-        ["Overall", "11.02 in dia × 9.32 in (280 × 237 mm); 9.5 lb"],
-        ["Cutout", "9.65 in (245 mm) dia"],
-        ["Face", "Flat perforated steel magnetic snap-fit grille, RAL 9003 white; sits about 0.2 in below the ceiling"],
-        ["Mount", "Dog-ear blind mount for ceilings 0–2.25 in thick"]
-      ],
-      "images": ["qsc_ad_c6t_zb"],
-      "objects": ["QSC_AD-C6T-ZB_Speaker_"],
-      "tt": ["QSC_AD-C6T-ZB_Speaker_1"],
-      "source": "qsys.com"
-    },
-    {
-      "id": "mic", "group": "ceiling", "view": "below",
-      "name": "Sennheiser TeamConnect Ceiling M",
-      "maker": "Sennheiser", "model": "TCC M with TCCM CTFP-W 2FT ceiling-tile plate",
-      "role": "Beamforming ceiling microphone in a 2 × 2 ft tile, front center between the projector and the screen.",
-      "specs": [
-        ["Array", "16.0 in dia × 1.8 in (407 × 46 mm); up to 10.8 lb"],
-        ["Tile plate", "23.88 × 23.88 × 1.02 in (606.5 × 606.5 × 26 mm)"],
-        ["Audio", "Beamforming; Dante and analog; PoE"],
-        ["Face", "Paintable white metal square with a round logo disc and LED ring"]
-      ],
-      "images": ["sennheiser_tccm"],
-      "objects": ["Sennheiser_TCCM"],
-      "tt": ["Sennheiser_TCCM_Ceiling_Mic"],
-      "source": "sennheiser.com"
-    },
-    {
-      "id": "rally", "group": "ceiling", "qty": 2, "view": "below",
-      "name": "Logitech Rally PTZ cameras",
-      "maker": "Logitech", "model": "Rally Camera (Ultra HD PTZ) with Streamline Kit",
-      "role": "The front camera faces the students. The rear camera faces the instructor.",
-      "specs": [
-        ["Size", "7.19 H × 5.98 W × 5.98 D in (182.5 × 152 × 152 mm); 3.35 lb"],
-        ["Optics", "Pan ±90°, tilt +50° / −90°, 15× zoom, 90° diagonal field of view"],
-        ["Mount", "1.5 in NPT adapter hangs the camera upside down; the image auto-flips"],
-        ["Link", "One Cat5e+ cable, up to 100 m, to the control box in the rack"]
-      ],
-      "images": ["logitech_rally_ptz"],
-      "objects": ["Logitech_Rally_PTZ_"],
-      "tt": ["Logitech_Rally_PTZ_A_Front_(faces_students)"],
-      "source": "logitech.com"
-    },
-    {
-      "id": "d5000", "group": "ceiling", "view": "below",
-      "name": "Visionary PacketAV D5000 decoder",
-      "maker": "Visionary Solutions", "model": "PacketAV D5000",
-      "role": "Mounted at the existing Sony laser projector. It turns the AV-over-IP stream back into HDMI.",
-      "specs": [
-        ["Size", "5.75 in wide over the flanges (body 4.8 in) × 1.15 H × 5.10 D in; 1.0 lb"],
-        ["Front", "LAN (PoE) and HDMI out"],
-        ["Rear", "RS-232 Euroblock"],
-        ["Power", "PoE"]
-      ],
-      "images": ["vs_d5000"],
-      "objects": ["VS_D5000"],
-      "tt": ["VS_D5000_Decoder_at_Projector"],
-      "source": "visionary-av.com"
-    },
-    {
-      "id": "projector", "group": "ceiling", "view": "below",
-      "name": "Laser projector",
-      "maker": "Sony", "model": "Existing unit, kept in place",
-      "role": "The room's existing Sony laser projector, fed by the D5000 decoder.",
-      "specs": [],
-      "images": [],
-      "objects": ["Ceiling_Projector"],
-      "tt": ["Ceiling_Projector"],
-      "source": "Project breakout card"
+     "label": "Casters for Heckler Lectern",
+     "url": "https://heckler.com/products/casters-for-heckler-lectern"
     }
-  ]
+   ]
+  },
+  {
+   "id": "panels",
+   "group": "lectern",
+   "name": "Modesty panels, three sides",
+   "maker": "Heckler",
+   "model": "H909-4U standard set (Heckler library code H9094U)",
+   "role": "Felt privacy panels on the audience side and both ends of the lectern. Shown here in Davidson red; the CTI quote lists Ebony.",
+   "specs": [
+    [
+     "Audience panel",
+     "39.7 W × 23 H × 0.4 in (1008 × 584 × 9 mm)"
+    ],
+    [
+     "Side panels (2)",
+     "18.5 W × 23 H × 0.4 in (470 × 584 × 9 mm)"
+    ],
+    [
+     "Material",
+     "FeltRight PET felt, 9 mm, 42 colors"
+    ],
+    [
+     "Mounting",
+     "Round button standoffs; installs without tools; hardware ships with the lectern"
+    ]
+   ],
+   "images": [
+    "heckler_h9094u"
+   ],
+   "objects": [
+    "Heckler_Modesty_Panel_"
+   ],
+   "tt": [
+    "Heckler_Modesty_Panel_Rear_Davidson_Red",
+    "Heckler_Modesty_Panel_Left_(east)_Davidson_Red",
+    "Heckler_Modesty_Panel_Right_(west)_Davidson_Red"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Standard modesty panels",
+     "url": "https://heckler.com/products/heckler-standard-modesty-panels"
+    }
+   ]
+  },
+  {
+   "id": "tap",
+   "group": "lectern",
+   "controller": true,
+   "name": "Logitech Tap IP",
+   "maker": "Logitech",
+   "model": "Tap IP touch controller, graphite",
+   "role": "The room controller. It carries the Zoom page and a QSC control page for 6×1 video routing.",
+   "specs": [
+    [
+     "Size",
+     "9.69 W × 6.74 D × 2.21 H in (246.2 × 171.3 × 56.1 mm); 2.2 lb"
+    ],
+    [
+     "Screen",
+     "10.1 in, 1280 × 800, IPS capacitive 10-point touch"
+    ],
+    [
+     "Connectivity",
+     "PoE (802.3af), Ethernet, Wi-Fi, Bluetooth"
+    ],
+    [
+     "Profile",
+     "Wedge: tall at the back, sloping to a thin front edge"
+    ]
+   ],
+   "images": [
+    "logitech_tap_ip"
+   ],
+   "objects": [
+    "Logitech_Tap_IP",
+    "Tap_IP_Screen"
+   ],
+   "tt": [
+    "Logitech_Tap_IP",
+    "Tap_IP_Screen"
+   ],
+   "source": "logitech.com",
+   "links": [
+    {
+     "label": "Logitech Tap IP",
+     "url": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/tap-ip.html"
+    }
+   ]
+  },
+  {
+   "id": "h930",
+   "group": "lectern",
+   "name": "Tap console insert",
+   "maker": "Heckler",
+   "model": "H930-BK Console Insert for Logitech Tap / Tap IP",
+   "role": "A wedge-shaped cradle in one console bay that holds the Tap tilted toward the presenter.",
+   "specs": [
+    [
+     "Fit",
+     "One lectern console bay (about 9.2 in / 234 mm wide)"
+    ],
+    [
+     "Install",
+     "Without tools"
+    ],
+    [
+     "Shipping weight",
+     "1.5 lb"
+    ],
+    [
+     "Note",
+     "Tap sold separately"
+    ]
+   ],
+   "images": [
+    "heckler_h930"
+   ],
+   "objects": [
+    "Heckler_H930"
+   ],
+   "tt": [
+    "Heckler_H930_Tap_Insert"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Console inserts for Heckler Lectern",
+     "url": "https://heckler.com/products/console-inserts-for-heckler-lectern"
+    }
+   ]
+  },
+  {
+   "id": "h956",
+   "group": "lectern",
+   "name": "Courtesy IO MKII insert",
+   "maker": "Heckler",
+   "model": "H956-BK Console Insert, Courtesy IO MKII",
+   "role": "Four keystone expansion ports and a wireless-charging pocket, in the second console bay.",
+   "specs": [
+    [
+     "Fit",
+     "One lectern console bay (about 9.2 in / 234 mm wide)"
+    ],
+    [
+     "Top",
+     "Round recessed pocket that holds a user-supplied Apple MagSafe puck"
+    ],
+    [
+     "Front",
+     "Four square openings on the sloped face; two round cable notches at one end"
+    ],
+    [
+     "Electronics",
+     "None listed by Heckler; no built-in charger"
+    ]
+   ],
+   "images": [
+    "heckler_h956"
+   ],
+   "objects": [
+    "Heckler_H956"
+   ],
+   "tt": [
+    "Heckler_H956_Courtesy_IO_MKII"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Console inserts for Heckler Lectern",
+     "url": "https://heckler.com/products/console-inserts-for-heckler-lectern"
+    }
+   ]
+  },
+  {
+   "id": "magsafe",
+   "group": "lectern",
+   "name": "Apple MagSafe Charger",
+   "maker": "Apple",
+   "model": "MagSafe Charger, 1 m",
+   "role": "The charging puck that sits in the Courtesy IO pocket, which is sized for it.",
+   "specs": [
+    [
+     "Certification",
+     "Qi2 25W and Qi"
+    ],
+    [
+     "Cable",
+     "1 m braided (2 m version available)"
+    ],
+    [
+     "Finish",
+     "White and silver"
+    ]
+   ],
+   "images": [
+    "qi_charger_insert"
+   ],
+   "objects": [
+    "MagSafe_"
+   ],
+   "tt": [
+    "MagSafe_Qi_Charger",
+    "MagSafe_Cable"
+   ],
+   "source": "apple.com",
+   "links": [
+    {
+     "label": "Apple MagSafe Charger",
+     "url": "https://www.apple.com/shop/product/mgd74ll/a/magsafe-charger-1-m"
+    }
+   ]
+  },
+  {
+   "id": "monitor",
+   "group": "lectern",
+   "name": "Annotation display",
+   "maker": "Owner-furnished (OFE)",
+   "model": "Display model not specified in the project sources",
+   "role": "Touch display for marking up slides. It sits low over the rear-left of the desk, below the instructor's sight line.",
+   "specs": [
+    [
+     "Mount",
+     "Chief K1D120BXRH desk clamp arm"
+    ]
+   ],
+   "images": [],
+   "objects": [
+    "Annotation_"
+   ],
+   "tt": [
+    "Annotation_Monitor_21in_Touch",
+    "Annotation_Monitor_Image"
+   ],
+   "source": "Project breakout card"
+  },
+  {
+   "id": "chief",
+   "group": "lectern",
+   "name": "Chief Kontour K1D desk clamp",
+   "maker": "Chief",
+   "model": "K1D120BXRH, reduced height, black",
+   "role": "Holds the annotation display on a gas-spring arm clamped to the desk. There is no vertical pole.",
+   "specs": [
+    [
+     "Monitor center",
+     "3.83–16.83 in (97–427 mm) above the desk; 13 in of travel"
+    ],
+    [
+     "Reach",
+     "19.25 in (489 mm) maximum extension"
+    ],
+    [
+     "Displays",
+     "VESA 75×75 or 100×100; 5–25 lb; 10–32 in"
+    ],
+    [
+     "Tilt",
+     "+75° / −10°"
+    ],
+    [
+     "Clamp",
+     "Desks 0.5–2.5 in thick"
+    ]
+   ],
+   "images": [
+    "chief_k1d120"
+   ],
+   "objects": [
+    "Chief_"
+   ],
+   "tt": [
+    "Chief_K1D120_Arm_Reduced_Height"
+   ],
+   "source": "csiergonomics.com",
+   "links": [
+    {
+     "label": "Chief Kontour K1D (Legrand AV)",
+     "url": "https://www.legrandav.com/products/mounts/desktop-monitor-mounts/kontour-k1d-dynamic-height-adjustable-desk-mounts/k1d120b"
+    },
+    {
+     "label": "Reduced-height K1D120BXRH specs",
+     "url": "https://csiergonomics.com/chief-kontour-k1d-dynamic-desk-mount-reduced-height-1.html"
+    }
+   ]
+  },
+  {
+   "id": "pad",
+   "group": "lectern",
+   "name": "Desk pad, Nero",
+   "maker": "Heckler",
+   "model": "H922-4023 Desk Pad for Lectern 4U",
+   "role": "Matte linoleum work surface over the hinged front of the desk, in front of the console bays.",
+   "specs": [
+    [
+     "Size",
+     "38.4 × 18.8 × 0.1 in (976 × 477 × 2 mm)"
+    ],
+    [
+     "Material",
+     "Matte natural desktop linoleum; 4023 is the color Nero (black)"
+    ]
+   ],
+   "images": [
+    "heckler_h922"
+   ],
+   "objects": [
+    "Heckler_H922"
+   ],
+   "tt": [
+    "Heckler_H922_Desk_Pad_Nero"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Desk pad for Heckler Lectern 4U",
+     "url": "https://heckler.com/products/deskpad-for-heckler-lectern-4u"
+    }
+   ]
+  },
+  {
+   "id": "cup",
+   "group": "lectern",
+   "name": "Cup holder",
+   "maker": "Heckler",
+   "model": "H926-BK",
+   "role": "Mounts to either side of the desktop body. Takes mugs, tumblers and bottles.",
+   "specs": [
+    [
+     "Size",
+     "4 × 4.5 × 3 in (102 × 114 × 76 mm); 1 lb"
+    ],
+    [
+     "Material",
+     "Black heat-resistant PETG"
+    ]
+   ],
+   "images": [
+    "heckler_h926"
+   ],
+   "objects": [
+    "Heckler_H926"
+   ],
+   "tt": [
+    "Heckler_H926_Cup_Holder"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Cup holder for Heckler Lectern",
+     "url": "https://heckler.com/products/cup-holder-for-heckler-lectern"
+    }
+   ]
+  },
+  {
+   "id": "hook",
+   "group": "lectern",
+   "name": "Bag hook",
+   "maker": "Heckler",
+   "model": "H925-BK",
+   "role": "Round knob-style hook on the side of the desktop body for bags, coats and assistive devices.",
+   "specs": [
+    [
+     "Size",
+     "2.4 × 2.4 × 2 in (60 × 60 × 51 mm); 1 lb"
+    ],
+    [
+     "Material",
+     "Black PLA over a steel core"
+    ]
+   ],
+   "images": [
+    "heckler_h925"
+   ],
+   "objects": [
+    "Heckler_H925"
+   ],
+   "tt": [
+    "Heckler_H925_Bag_Hook"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Bag hook for Heckler Lectern",
+     "url": "https://heckler.com/products/bag-hook-for-heckler-lectern"
+    }
+   ]
+  },
+  {
+   "id": "chain",
+   "group": "lectern",
+   "name": "Cable management kit",
+   "maker": "Heckler",
+   "model": "H936",
+   "role": "Vertebra-style cable chain that runs from under the desktop to the floor beside one column.",
+   "specs": [
+    [
+     "Contents",
+     "Cable chain, base plate, connector, mounting plate, hardware"
+    ],
+    [
+     "Weight",
+     "2.2 lb"
+    ],
+    [
+     "Colors",
+     "Black or translucent (black shown)"
+    ]
+   ],
+   "images": [
+    "heckler_h936"
+   ],
+   "objects": [
+    "Heckler_H936"
+   ],
+   "tt": [
+    "Heckler_H936_Cable_Chain"
+   ],
+   "source": "heckler.com",
+   "links": [
+    {
+     "label": "Cable management kit for Heckler Lectern",
+     "url": "https://heckler.com/products/cable-management-kit-for-heckler-lectern"
+    }
+   ]
+  },
+  {
+   "id": "laptop",
+   "group": "lectern",
+   "name": "Presenter laptop and peripherals",
+   "maker": "Shown for context",
+   "model": "Instructor's own laptop, keyboard and mouse",
+   "role": "Stands in for the instructor's laptop. One USB-C cable to the Sound Control USB-PDI-100 in the rack carries video, USB and charging.",
+   "specs": [],
+   "images": [],
+   "objects": [
+    "MacBook_",
+    "Keyboard_",
+    "Mouse_",
+    "USB-C_"
+   ],
+   "tt": [
+    "MacBook_Pro_14",
+    "MacBook_Display_Image"
+   ],
+   "source": "Project breakout card"
+  },
+  {
+   "id": "core8",
+   "group": "rack",
+   "name": "Q-SYS Core 8 Flex",
+   "maker": "Q-SYS (QSC)",
+   "model": "Core 8 Flex audio processor",
+   "role": "Audio DSP and USB audio device for the Zoom Room.",
+   "specs": [
+    [
+     "Size",
+     "1.72 H × 8.66 W × 11.28 D in (43.6 × 220 × 286.6 mm); 1RU, half-rack width; 4.0 lb"
+    ],
+    [
+     "Audio I/O",
+     "8 Flex analog channels, USB audio, Dante 8×8, 64×64 Q-LAN"
+    ],
+    [
+     "Control",
+     "8×8 GPIO, 2× RS-232"
+    ]
+   ],
+   "images": [
+    "qsc_core8flex"
+   ],
+   "objects": [
+    "Rack_QSC_Core_8_Flex"
+   ],
+   "tt": [
+    "Rack_QSC_Core_8_Flex"
+   ],
+   "source": "qsys.com",
+   "links": [
+    {
+     "label": "Q-SYS Core 8 Flex",
+     "url": "https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/"
+    }
+   ]
+  },
+  {
+   "id": "spa2",
+   "group": "rack",
+   "name": "QSC SPA2-200 amplifier",
+   "maker": "QSC",
+   "model": "SPA2-200 two-channel amplifier",
+   "role": "Drives the six 70 V ceiling speakers.",
+   "specs": [
+    [
+     "Size",
+     "1.7 H × 8.7 W × 9.5 D in (43 × 220 × 241 mm); 1RU, half-rack width"
+    ],
+    [
+     "Output",
+     "200 W total; 4/8 Ω or 70/100 V bridged"
+    ],
+    [
+     "Cooling",
+     "Convection-cooled class D"
+    ],
+    [
+     "Weight",
+     "4.0 lb as printed (the spec sheet's 1.4 kg does not match)"
+    ]
+   ],
+   "images": [
+    "qsc_spa2_200"
+   ],
+   "objects": [
+    "Rack_QSC_SPA2"
+   ],
+   "tt": [
+    "Rack_QSC_SPA2-200_Amp"
+   ],
+   "source": "qsys.com",
+   "links": [
+    {
+     "label": "QSC SPA2-200 amplifier",
+     "url": "https://www.qsys.com/products-solutions/power-amplifiers/installed/non-network/low-power-applications/spa-series/spa2-200/"
+    }
+   ]
+  },
+  {
+   "id": "e5200",
+   "group": "rack",
+   "qty": 2,
+   "name": "Visionary PacketAV E5200 encoder",
+   "maker": "Visionary Solutions",
+   "model": "PacketAV E5200",
+   "role": "Three-input AV-over-IP encoders that feed the projector's decoder.",
+   "specs": [
+    [
+     "Size",
+     "5.75 in wide over the flanges (body 4.80 in) × 1.1 H × 8.86 D in; 1.0 lb"
+    ],
+    [
+     "Front",
+     "LAN1 (PoE in), LAN2 (PoE out), HDMI out (loop), HDMI in 1, HDMI in 2, USB-C in"
+    ],
+    [
+     "Rear",
+     "Two 8-pin Euroblocks (audio, GPIO/RS-232), USB-B"
+    ]
+   ],
+   "images": [
+    "vs_e5200"
+   ],
+   "objects": [
+    "Rack_VS_E5200"
+   ],
+   "tt": [
+    "Rack_VS_E5200_Encoder_1"
+   ],
+   "source": "visionary-av.com",
+   "links": [
+    {
+     "label": "PacketAV E5200 encoder",
+     "url": "https://visionary-av.com/project/e5200-encoder-decoder/"
+    }
+   ]
+  },
+  {
+   "id": "roommate",
+   "group": "rack",
+   "name": "Logitech RoomMate",
+   "maker": "Logitech",
+   "model": "RoomMate CollabOS computing appliance",
+   "role": "The Zoom Rooms appliance. It runs the Tap IP and both Rally cameras.",
+   "specs": [
+    [
+     "Size",
+     "6.34 W × 8.31 D × 1.36 H in (161 × 211 × 34.5 mm)"
+    ],
+    [
+     "Ports",
+     "2× HDMI out, 1× HDMI in, 3× USB-A 2.0, GbE, Wi-Fi"
+    ],
+    [
+     "Mounting",
+     "Mounting plate included"
+    ]
+   ],
+   "images": [
+    "logitech_roommate"
+   ],
+   "objects": [
+    "Rack_Logitech_RoomMate"
+   ],
+   "tt": [
+    "Rack_Logitech_RoomMate"
+   ],
+   "source": "logitech.com",
+   "links": [
+    {
+     "label": "Logitech RoomMate",
+     "url": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/roommate.html"
+    }
+   ]
+  },
+  {
+   "id": "streamline",
+   "group": "rack",
+   "qty": 2,
+   "name": "Rally Streamline control boxes",
+   "maker": "Logitech",
+   "model": "Rally Camera Streamline Kit, Control Side Box",
+   "role": "Control boxes in the rack, with single-cable runs up to the two ceiling cameras.",
+   "specs": [
+    [
+     "Control Side Box",
+     "5.30 × 4.61 × 0.90 in"
+    ],
+    [
+     "Link",
+     "One Cat5e+ cable, up to 100 m, to the Camera Side Base under each camera"
+    ],
+    [
+     "Output",
+     "USB-C at the rack"
+    ]
+   ],
+   "images": [
+    "logitech_rally_ptz"
+   ],
+   "objects": [
+    "Rack_Streamline"
+   ],
+   "tt": [
+    "Rack_Streamline_Control_Box_1"
+   ],
+   "source": "logitech.com",
+   "links": [
+    {
+     "label": "Rally Camera Streamline Kit",
+     "url": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-streamline-kit.html"
+    },
+    {
+     "label": "Streamline Kit specifications",
+     "url": "https://hub.sync.logitech.com/rally-camera-streamline-kit/post/rally-camera-streamline-kit---specifications-WxZ5GlnGCVHN6of"
+    }
+   ]
+  },
+  {
+   "id": "usbpdi",
+   "group": "rack",
+   "name": "Sound Control USB-PDI-100",
+   "maker": "Sound Control Technologies",
+   "model": "USB-PDI 100W Power Delivery Injector",
+   "role": "One USB-C cable to the laptop carries video, USB and 100 W charging. The box breaks those out to HDMI and USB-A.",
+   "specs": [
+    [
+     "Size",
+     "0.77 H × 2.91 W × 4.11 D in; 0.26 lb (AV-iQ figures for the USB-PDI)"
+    ],
+    [
+     "Front",
+     "USB-C Power + Data, firmware button, power LED"
+    ],
+    [
+     "Rear",
+     "USB-C Power In, USB-A Data, HDMI Out"
+    ],
+    [
+     "Charging",
+     "100 W on the -100 model"
+    ]
+   ],
+   "images": [
+    "soundcontrol_usb_pdi_100"
+   ],
+   "objects": [
+    "Rack_SCT_USB"
+   ],
+   "tt": [
+    "Rack_SCT_USB-PDI-100"
+   ],
+   "source": "creationnetworks.net, av-iq.com",
+   "links": [
+    {
+     "label": "USB-PDI-100 (Sound Control Technologies)",
+     "url": "https://soundcontrol.net/product/usb-pdi/"
+    },
+    {
+     "label": "Creation Networks listing",
+     "url": "https://creationnetworks.net/products/sound-control-technologies-usb-pdi-usb-power-delivery-injector"
+    }
+   ]
+  },
+  {
+   "id": "power",
+   "group": "rack",
+   "name": "Rack power strip",
+   "maker": "Not specified",
+   "model": "Modeled for completeness",
+   "role": "Power distribution inside the lectern rack. The project sources carry no product data for it.",
+   "specs": [],
+   "images": [],
+   "objects": [
+    "Rack_Power_Strip"
+   ],
+   "tt": [
+    "Rack_Power_Strip"
+   ],
+   "source": "Model only"
+  },
+  {
+   "id": "speakers",
+   "group": "ceiling",
+   "qty": 6,
+   "view": "below",
+   "name": "Q-SYS AD-C6T-ZB ceiling speakers",
+   "maker": "Q-SYS (QSC)",
+   "model": "AcousticDesign AD-C6T-ZB-WH",
+   "role": "6.5 in two-way, zero-bezel speakers on a 6 ft grid over the seating.",
+   "specs": [
+    [
+     "Overall",
+     "11.02 in dia × 9.32 in (280 × 237 mm); 9.5 lb"
+    ],
+    [
+     "Cutout",
+     "9.65 in (245 mm) dia"
+    ],
+    [
+     "Face",
+     "Flat perforated steel magnetic snap-fit grille, RAL 9003 white; sits about 0.2 in below the ceiling"
+    ],
+    [
+     "Mount",
+     "Dog-ear blind mount for ceilings 0–2.25 in thick"
+    ]
+   ],
+   "images": [
+    "qsc_ad_c6t_zb"
+   ],
+   "objects": [
+    "QSC_AD-C6T-ZB_Speaker_"
+   ],
+   "tt": [
+    "QSC_AD-C6T-ZB_Speaker_1"
+   ],
+   "source": "qsys.com",
+   "links": [
+    {
+     "label": "Q-SYS AD-C6T-ZB",
+     "url": "https://www.qsys.com/products/loudspeakers/installed/passive/ceiling-mount/acousticdesign-series/ad-c6t-zb/"
+    }
+   ]
+  },
+  {
+   "id": "mic",
+   "group": "ceiling",
+   "view": "below",
+   "name": "Sennheiser TeamConnect Ceiling M",
+   "maker": "Sennheiser",
+   "model": "TCC M with TCCM CTFP-W 2FT ceiling-tile plate",
+   "role": "Beamforming ceiling microphone in a 2 × 2 ft tile, front center between the projector and the screen.",
+   "specs": [
+    [
+     "Array",
+     "16.0 in dia × 1.8 in (407 × 46 mm); up to 10.8 lb"
+    ],
+    [
+     "Tile plate",
+     "23.88 × 23.88 × 1.02 in (606.5 × 606.5 × 26 mm)"
+    ],
+    [
+     "Audio",
+     "Beamforming; Dante and analog; PoE"
+    ],
+    [
+     "Face",
+     "Paintable white metal square with a round logo disc and LED ring"
+    ]
+   ],
+   "images": [
+    "sennheiser_tccm"
+   ],
+   "objects": [
+    "Sennheiser_TCCM"
+   ],
+   "tt": [
+    "Sennheiser_TCCM_Ceiling_Mic"
+   ],
+   "source": "sennheiser.com",
+   "links": [
+    {
+     "label": "Sennheiser TCC M ceiling-tile plate",
+     "url": "https://www.sennheiser.com/en-us/catalog/products/meeting-and-conference-systems/tcc-m-accessories/teamconnect-ceiling-medium-ctfp-w-2ft-700516"
+    }
+   ]
+  },
+  {
+   "id": "rally",
+   "group": "ceiling",
+   "qty": 2,
+   "view": "below",
+   "name": "Logitech Rally PTZ cameras",
+   "maker": "Logitech",
+   "model": "Rally Camera (Ultra HD PTZ) with Streamline Kit",
+   "role": "The front camera faces the students. The rear camera faces the instructor.",
+   "specs": [
+    [
+     "Size",
+     "7.19 H × 5.98 W × 5.98 D in (182.5 × 152 × 152 mm); 3.35 lb"
+    ],
+    [
+     "Optics",
+     "Pan ±90°, tilt +50° / −90°, 15× zoom, 90° diagonal field of view"
+    ],
+    [
+     "Mount",
+     "1.5 in NPT adapter hangs the camera upside down; the image auto-flips"
+    ],
+    [
+     "Link",
+     "One Cat5e+ cable, up to 100 m, to the control box in the rack"
+    ]
+   ],
+   "images": [
+    "logitech_rally_ptz"
+   ],
+   "objects": [
+    "Logitech_Rally_PTZ_"
+   ],
+   "tt": [
+    "Logitech_Rally_PTZ_A_Front_(faces_students)"
+   ],
+   "source": "logitech.com",
+   "links": [
+    {
+     "label": "Logitech Rally Ultra HD PTZ camera",
+     "url": "https://www.logitech.com/en-us/products/video-conferencing/conference-cameras/rally-ultra-hd-ptz-camera.html"
+    },
+    {
+     "label": "Streamline Kit specifications",
+     "url": "https://hub.sync.logitech.com/rally-camera-streamline-kit/post/rally-camera-streamline-kit---specifications-WxZ5GlnGCVHN6of"
+    }
+   ]
+  },
+  {
+   "id": "d5000",
+   "group": "ceiling",
+   "view": "below",
+   "name": "Visionary PacketAV D5000 decoder",
+   "maker": "Visionary Solutions",
+   "model": "PacketAV D5000",
+   "role": "Mounted at the existing Sony laser projector. It turns the AV-over-IP stream back into HDMI.",
+   "specs": [
+    [
+     "Size",
+     "5.75 in wide over the flanges (body 4.8 in) × 1.15 H × 5.10 D in; 1.0 lb"
+    ],
+    [
+     "Front",
+     "LAN (PoE) and HDMI out"
+    ],
+    [
+     "Rear",
+     "RS-232 Euroblock"
+    ],
+    [
+     "Power",
+     "PoE"
+    ]
+   ],
+   "images": [
+    "vs_d5000"
+   ],
+   "objects": [
+    "VS_D5000"
+   ],
+   "tt": [
+    "VS_D5000_Decoder_at_Projector"
+   ],
+   "source": "visionary-av.com",
+   "links": [
+    {
+     "label": "PacketAV D5000 decoder",
+     "url": "https://visionary-av.com/project/d5000-decoder/"
+    }
+   ]
+  },
+  {
+   "id": "projector",
+   "group": "ceiling",
+   "view": "below",
+   "name": "Laser projector",
+   "maker": "Sony",
+   "model": "Existing unit, kept in place",
+   "role": "The room's existing Sony laser projector, fed by the D5000 decoder.",
+   "specs": [],
+   "images": [],
+   "objects": [
+    "Ceiling_Projector"
+   ],
+   "tt": [
+    "Ceiling_Projector"
+   ],
+   "source": "Project breakout card"
+  }
+ ]
 }

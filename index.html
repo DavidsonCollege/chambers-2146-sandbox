@@ -146,6 +146,13 @@ h1{font:700 clamp(34px,4.6vw,56px)/1.04 var(--serif);letter-spacing:-.012em;marg
 .pimgs{display:flex;gap:8px;flex-wrap:wrap}
 .pimgs img{width:96px;height:96px;object-fit:contain;background:var(--specimen);border:1px solid var(--specimen-line);padding:6px}
 .d-src{margin:0;font-size:12px;color:var(--text-3)}
+.d-src-h{margin:0 0 6px;font:700 10.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.d-src ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.d-src a{display:inline;font:400 13.5px/1.4 var(--sans);color:var(--text);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-decoration-thickness:1px}
+.d-src a:hover{color:var(--accent-text);text-decoration-color:currentColor}
+.d-dom{margin-left:7px;font-size:12px;color:var(--text-3);text-decoration:none;display:inline-block}
+.d-ext{margin-left:4px;font-size:12px;color:var(--text-3);display:inline-block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .d-none{margin:0;font-size:13px;color:var(--text-3);font-style:italic}
 
 /* controller drawer (fixed dark device look in both themes) */
@@ -311,17 +318,39 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
 .dp-diag .wire{stroke:var(--dp-line);stroke-width:1.5}
 .dp-diag .ping{stroke:var(--dp-ok);stroke-width:2;stroke-dasharray:3 7;fill:none;animation:dp-flowup 1.4s linear infinite}
 .dp-diag .stream{stroke:var(--dp-ink2);stroke-width:3;stroke-dasharray:8 6;fill:none;animation:dp-flow 1s linear infinite}
-.dp-diag .alert{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:6 6;fill:none;opacity:0;animation:dp-alert 7s ease-in-out infinite}
-.dp-diag .fault{fill:var(--dp-fault);opacity:0;animation:dp-fault 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.dp-diag .dt{font:700 11px var(--sans);fill:var(--dp-ink)}
+.dp-diag .ds{font:400 10px var(--sans);fill:var(--dp-ink3)}
+.dp-diag .alert{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:6 8;fill:none;opacity:0}
+.dp-diag .al-r{animation:dp-flow 1s linear infinite,dp-oa 9s ease-in-out infinite}
+.dp-diag .al-s{animation:dp-flow 1s linear infinite,dp-ob 9s ease-in-out infinite}
+.dp-diag .fault{fill:var(--dp-fault);opacity:0;transform-box:fill-box;transform-origin:center}
+.dp-diag .f-r{animation:dp-fa 9s ease-in-out infinite}
+.dp-diag .f-s{animation:dp-fb 9s ease-in-out infinite}
 .dp-diag .ok{fill:var(--dp-ok)}
-.dp-diag .techring{fill:none;stroke:var(--dp-fault);stroke-width:2;opacity:0;animation:dp-tech 7s ease-in-out infinite}
-.dp-diag .pingbad{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:3 7;fill:none;opacity:0;animation:dp-flowup 1.4s linear infinite,dp-bad 7s ease-in-out infinite}
+.dp-diag .techring{fill:none;stroke:var(--dp-fault);stroke-width:2;opacity:0;animation:dp-tr 9s ease-in-out infinite}
+.dp-diag .pingbad{stroke:var(--dp-fault);stroke-width:2;stroke-dasharray:3 7;fill:none;opacity:0}
+.dp-diag .pb-r{animation:dp-flowup 1.4s linear infinite,dp-ba 9s ease-in-out infinite}
+.dp-diag .pb-s{animation:dp-flowup 1.4s linear infinite,dp-bb 9s ease-in-out infinite}
 @keyframes dp-flowup{to{stroke-dashoffset:-20}}
 @keyframes dp-flow{to{stroke-dashoffset:-28}}
-@keyframes dp-fault{0%,30%{opacity:0;transform:scale(.4)}36%,78%{opacity:1;transform:scale(1)}86%,100%{opacity:0;transform:scale(.4)}}
-@keyframes dp-bad{0%,32%{opacity:0}38%,78%{opacity:1}84%,100%{opacity:0}}
-@keyframes dp-alert{0%,42%{opacity:0;stroke-dashoffset:0}48%,78%{opacity:1}78%{stroke-dashoffset:-60}84%,100%{opacity:0;stroke-dashoffset:-72}}
-@keyframes dp-tech{0%,52%{opacity:0}58%,80%{opacity:1}86%,100%{opacity:0}}
+@keyframes dp-fa{0%,6%{opacity:0;transform:scale(.4)}10%,38%{opacity:1;transform:scale(1)}44%,100%{opacity:0;transform:scale(.4)}}
+@keyframes dp-fb{0%,52%{opacity:0;transform:scale(.4)}56%,84%{opacity:1;transform:scale(1)}90%,100%{opacity:0;transform:scale(.4)}}
+@keyframes dp-ba{0%,8%{opacity:0}12%,38%{opacity:1}44%,100%{opacity:0}}
+@keyframes dp-bb{0%,54%{opacity:0}58%,84%{opacity:1}90%,100%{opacity:0}}
+@keyframes dp-oa{0%,15%{opacity:0}19%,38%{opacity:1}44%,100%{opacity:0}}
+@keyframes dp-ob{0%,61%{opacity:0}65%,84%{opacity:1}90%,100%{opacity:0}}
+@keyframes dp-tr{0%,21%{opacity:0}25%,40%{opacity:1}45%,67%{opacity:0}71%,86%{opacity:1}91%,100%{opacity:0}}
+
+/* Zoom agreement timeline */
+.dp-tl{display:grid;grid-template-columns:1fr 1fr;column-gap:3px;row-gap:8px}
+.dp-tl-seg{display:flex;flex-direction:column;gap:3px}
+.dp-tl-seg .k{font:700 10.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dp-ink3)}
+.dp-tl-seg .v{font:700 20px/1.1 var(--sans);color:var(--dp-ink)}
+.dp-tl-seg i{display:block;height:12px;margin-top:6px;transform-origin:left center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.dp-tl-seg.a i{background:var(--dp-other);border-radius:3px 0 0 3px}
+.dp-tl-seg.b i{background:var(--dp-part);border-radius:0 3px 3px 0;transition-delay:.55s}
+.pre .dp-tl-seg i{transform:scaleX(0)}
+.dp-tl-yrs{grid-column:1/-1;display:flex;justify-content:space-between;font:400 12px/1 var(--sans);color:var(--dp-ink3);font-variant-numeric:tabular-nums}
 .dp-steps{list-style:none;counter-reset:s;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .dp-steps li{counter-increment:s;font:400 13px/1.45 var(--sans);color:var(--dp-ink2);border-top:1px solid var(--dp-line);padding-top:10px}
 .dp-steps li::before{content:counter(s);display:block;font:700 12px/1 var(--sans);color:var(--dp-ink);margin-bottom:6px}
@@ -463,7 +492,8 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
           <h3>Reliability</h3>
           <p>Classroom emergencies are our longest-running problem in classroom AV. When a room fails in the middle of class, the instructor presses the help button, a technician heads across campus, and the class loses time it doesn’t get back. Since fall 2023, our classrooms have logged 2,440 classroom emergency tickets across six semesters, roughly 400 a semester.</p>
           <p>Hance Auditorium logged more than any other room. Last spring it averaged more than one emergency every other school day: 47 in 70 class days, nearly twice the next room on the list. This summer we rebuilt Hance on an early version of this standard. Through the first 23 class days of the fall semester, it hasn’t had a single one.</p>
-          <p>Better equipment is part of that. Visibility is the other part. Q-SYS Reflect watches every device in the system in real time and alerts us when one drops offline or reports a fault, often before anyone walks into the room. Video runs over AV over IP, so every encoder and decoder is a device on the network that we can check and manage remotely. Instead of tracing a signal through a chain of HDMI extenders and switchers, a technician can see which device failed and start fixing it right away.</p>
+          <p>Better equipment is part of that. Visibility is the other part, and two tools split the room between them. Q-SYS Reflect watches the audio and video side in real time and alerts us when a device drops offline or reports a fault, often before anyone walks into the room. Logitech Sync does the same for the Zoom and control side. It tracks the health of the RoomMate, the Tap IP and both Rally cameras, pushes firmware and settings to them remotely, and flags a device that needs attention before it gets in the way of a class. It also works alongside Zoom’s own device management, so the meeting software and the room hardware are both in view.</p>
+          <p>Video runs over AV over IP, so every encoder and decoder is a device on the network that we can check and manage remotely. Instead of tracing a signal through a chain of HDMI extenders and switchers, a technician can see which device failed and start fixing it right away.</p>
         </div>
         <div class="dp-figs">
           <figure class="dp-fig" data-anim="count">
@@ -518,35 +548,39 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
 
           <figure class="dp-fig">
             <p class="dp-lbl">How a fault gets found</p>
-            <div class="dp-diag"><svg viewBox="0 0 600 226" role="img" aria-labelledby="dp-diag-t dp-diag-d">
+            <div class="dp-diag"><svg viewBox="0 0 600 302" role="img" aria-labelledby="dp-diag-t dp-diag-d">
 <title id="dp-diag-t">How a fault gets found</title>
-<desc id="dp-diag-d">Every device in the room reports its health over the campus network to Q-SYS Reflect. When the projector's decoder reports a fault, Reflect alerts an AV technician. Video travels from the lectern encoder to the projector decoder as a network stream.</desc>
-<rect class="box" x="24" y="12" width="196" height="50" rx="3"/>
-<text class="bt" x="38" y="33">Q-SYS Reflect</text><text class="bs" x="38" y="50">Monitoring and alerts</text>
-<rect class="box" x="380" y="12" width="196" height="50" rx="3"/>
-<rect class="techring" x="377" y="9" width="202" height="56" rx="5"/>
-<text class="bt" x="394" y="33">AV technician</text><text class="bs" x="394" y="50">Alert on a phone or laptop</text>
-<path class="alert" d="M222,37H378"/>
-<line class="wire" x1="122" y1="62" x2="122" y2="112"/>
-<path class="ping" d="M122,112V64"/>
-<text class="nl" x="24" y="104">CAMPUS NETWORK</text>
-<text class="nl" x="442" y="104" text-anchor="middle">VIDEO STREAM</text>
-<rect class="net" x="24" y="112" width="552" height="8" rx="4"/>
-<path class="stream" d="M371,116H513"/>
-<g>
-<line class="wire" x1="87" y1="164" x2="87" y2="120"/><path class="ping" d="M87,164V122"/>
-<line class="wire" x1="229" y1="164" x2="229" y2="120"/><path class="ping" d="M229,164V122"/>
-<line class="wire" x1="371" y1="164" x2="371" y2="120"/><path class="ping" d="M371,164V122"/>
-<line class="wire" x1="513" y1="164" x2="513" y2="120"/><path class="ping" d="M513,164V122"/><path class="pingbad" d="M513,164V122"/>
-</g>
-<rect class="box" x="24" y="164" width="126" height="52" rx="3"/><text class="bt" x="36" y="186">Tap IP</text><text class="bs" x="36" y="203">Room controller</text><circle class="ok" cx="138" cy="176" r="4"/>
-<rect class="box" x="166" y="164" width="126" height="52" rx="3"/><text class="bt" x="178" y="186">Core 8 Flex</text><text class="bs" x="178" y="203">Audio processor</text><circle class="ok" cx="280" cy="176" r="4"/>
-<rect class="box" x="308" y="164" width="126" height="52" rx="3"/><text class="bt" x="320" y="186">E5200 encoder</text><text class="bs" x="320" y="203">Lectern inputs</text><circle class="ok" cx="422" cy="176" r="4"/>
-<rect class="box" x="450" y="164" width="126" height="52" rx="3"/><text class="bt" x="462" y="186">D5000 decoder</text><text class="bs" x="462" y="203">At the projector</text><circle class="ok" cx="564" cy="176" r="4"/><circle class="fault" cx="564" cy="176" r="5.5"/>
+<desc id="dp-diag-d">Logitech Sync monitors the Zoom and control devices: the Tap IP controller, the RoomMate and the Rally cameras. Q-SYS Reflect monitors the audio and video devices: the Core 8 Flex, the E5200 encoder and the D5000 decoder. When a device reports a problem, either tool alerts an AV technician. Video travels from the encoder to the decoder as a network stream.</desc>
+<rect class="box" x="200" y="10" width="200" height="46" rx="3"/>
+<rect class="techring" x="197" y="7" width="206" height="52" rx="5"/>
+<text class="bt" x="300" y="30" text-anchor="middle">AV technician</text>
+<text class="bs" x="300" y="46" text-anchor="middle">Alerts on a phone or laptop</text>
+<path class="wire" d="M153,96V33H200" fill="none"/><path class="wire" d="M447,96V33H400" fill="none"/>
+<path class="alert al-s" d="M153,96V33H198"/><path class="alert al-r" d="M447,96V33H402"/>
+<rect class="box" x="24" y="96" width="258" height="50" rx="3"/>
+<text class="bt" x="38" y="117">Logitech Sync</text><text class="bs" x="38" y="134">Zoom and control side</text>
+<rect class="box" x="318" y="96" width="258" height="50" rx="3"/>
+<text class="bt" x="332" y="117">Q-SYS Reflect</text><text class="bs" x="332" y="134">Audio and video side</text>
+<line class="wire" x1="65" y1="206" x2="65" y2="146"/><path class="ping" d="M65,206V148"/>
+<line class="wire" x1="153" y1="206" x2="153" y2="146"/><path class="ping" d="M153,206V148"/>
+<line class="wire" x1="241" y1="206" x2="241" y2="146"/><path class="ping" d="M241,206V148"/>
+<line class="wire" x1="359" y1="206" x2="359" y2="146"/><path class="ping" d="M359,206V148"/>
+<line class="wire" x1="447" y1="206" x2="447" y2="146"/><path class="ping" d="M447,206V148"/>
+<line class="wire" x1="535" y1="206" x2="535" y2="146"/><path class="ping" d="M535,206V148"/>
+<path class="pingbad pb-s" d="M241,206V148"/><path class="pingbad pb-r" d="M535,206V148"/>
+<rect class="box" x="24" y="206" width="82" height="50" rx="3"/><text class="dt" x="32" y="228">Tap IP</text><text class="ds" x="32" y="244">Controller</text><circle class="ok" cx="97" cy="217" r="3.5"/>
+<rect class="box" x="112" y="206" width="82" height="50" rx="3"/><text class="dt" x="120" y="228">RoomMate</text><text class="ds" x="120" y="244">Zoom Rooms</text><circle class="ok" cx="185" cy="217" r="3.5"/>
+<rect class="box" x="200" y="206" width="82" height="50" rx="3"/><text class="dt" x="208" y="228">Rally PTZ</text><text class="ds" x="208" y="244">Two cameras</text><circle class="ok" cx="273" cy="217" r="3.5"/>
+<rect class="box" x="318" y="206" width="82" height="50" rx="3"/><text class="dt" x="326" y="228">Core 8 Flex</text><text class="ds" x="326" y="244">Audio DSP</text><circle class="ok" cx="391" cy="217" r="3.5"/>
+<rect class="box" x="406" y="206" width="82" height="50" rx="3"/><text class="dt" x="414" y="228">E5200</text><text class="ds" x="414" y="244">Encoder</text><circle class="ok" cx="479" cy="217" r="3.5"/>
+<rect class="box" x="494" y="206" width="82" height="50" rx="3"/><text class="dt" x="502" y="228">D5000</text><text class="ds" x="502" y="244">Decoder</text><circle class="ok" cx="567" cy="217" r="3.5"/>
+<circle class="fault f-s" cx="273" cy="217" r="5"/><circle class="fault f-r" cx="567" cy="217" r="5"/>
+<path class="stream" d="M447,256C447,282 535,282 535,256"/>
+<text class="nl" x="491" y="297" text-anchor="middle">VIDEO OVER IP</text>
 </svg></div>
             <ol class="dp-steps">
               <li>Every device reports its health over the campus network.</li>
-              <li>Q-SYS Reflect sends an alert when something drops offline or reports a fault.</li>
+              <li>Logitech Sync or Q-SYS Reflect sends an alert when a device drops offline or reports a fault.</li>
               <li>A technician sees exactly which device failed and can start on it remotely.</li>
             </ol>
           </figure>
@@ -558,12 +592,22 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
           <h3>Modernity</h3>
           <p>This isn’t an experimental standard. It doesn’t try to push the boundaries of what’s possible in AV, and that’s deliberate. It isn’t what faculty are asking us for.</p>
           <p>They’re asking for rooms with a clean, modern, predictable interface that works the same way in every building where they teach. And they’re asking for features like Zoom and annotation, which have been table stakes at other colleges and universities for years. So the standard uses proven, widely deployed products and puts them in the same place, with the same controls, in every room.</p>
+          <p>Zoom will be with us for a long time. Last fall the college signed a five-year agreement with Zoom with the option to renew for five more, up to ten years in all. Unlimited Zoom Rooms were part of the deal, which makes Zoom Rooms a no-cost campus service. Every room that moves to the standard can run as a Zoom Room without adding a license or a bill-back.</p>
         </div>
         <div class="dp-figs">
           <figure class="dp-fig" data-anim="rooms">
             <p class="dp-lbl">The same controls in every room</p>
             <div class="dp-rooms" aria-hidden="true"><div class="dp-mini" style="--i:0"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:1"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:2"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:3"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:4"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div><div class="dp-mini" style="--i:5"><b></b><b></b><b></b><b></b><b></b><b></b><u></u></div></div>
             <figcaption class="dp-cap">Every room that moves to the standard gets the same controller layout, the same help button and the same ways to connect.</figcaption>
+          </figure>
+          <figure class="dp-fig" data-anim="zoom">
+            <p class="dp-lbl">Our Zoom agreement</p>
+            <div class="dp-tl">
+              <div class="dp-tl-seg a"><span class="k">Initial term</span><span class="v">5 years</span><i></i></div>
+              <div class="dp-tl-seg b"><span class="k">Renewal option</span><span class="v">Up to 5 more</span><i></i></div>
+              <div class="dp-tl-yrs"><span>2025</span><span>2030</span><span>2035</span></div>
+            </div>
+            <figcaption class="dp-cap">Signed in October 2025. Unlimited Zoom Rooms are included, so a room that moves to the standard doesn’t add a Zoom license.</figcaption>
           </figure>
           <figure class="dp-fig" data-anim="asks">
             <p class="dp-lbl">What faculty are asking for</p>
@@ -1107,6 +1151,12 @@ function setTab(which) {
   if (!parts) TT.active = false; else if (selected && !ui.partDetail.hidden) TT.active = true;
 }
 const GROUP_LABEL = { lectern: 'On the lectern', rack: 'Inside the lectern rack', ceiling: 'In the ceiling' };
+const srcHtml = c => {
+  if (!c.links || !c.links.length) return `<p class="d-src">Source: ${esc(c.source)}</p>`;
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+  return `<div class="d-src"><p class="d-src-h">Source</p><ul>${c.links.map(l =>
+    `<li><a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)}<span class="d-dom">${esc(host(l.url))}</span><span class="d-ext" aria-hidden="true">↗</span><span class="sr">(opens in a new tab)</span></a></li>`).join('')}</ul></div>`;
+};
 function selectComponent(id, opts = {}) {
   const c = COMP.get(id); if (!c) return;
   const ps = selected; selected = c; refreshHighlight(hovered, ps);
@@ -1119,7 +1169,7 @@ function selectComponent(id, opts = {}) {
   const imgs = c.images.length ? `<div class="pimgs">${c.images.map(i => `<img src="img/products/${i}.webp" alt="${esc(c.name)} product photo" loading="lazy" width="96" height="96">`).join('')}</div>` : '';
   ui.partBody.innerHTML = `<p class="eyebrow"${c.group === 'ceiling' ? ' style="color:var(--ceil)"' : ''}>${esc(GROUP_LABEL[c.group])}${c.qty ? ' · ' + c.qty + ' in the room' : ''}</p>
     <h3>${esc(c.name)}</h3><p class="d-model">${esc(c.maker)} · ${esc(c.model)}</p><p class="d-role">${esc(c.role)}</p>${specs}${imgs}
-    <p class="d-src">Source: ${esc(c.source)}</p>${c.controller ? '<button type="button" class="btn btn-solid" data-open-controller>Open controller preview</button>' : ''}`;
+    ${srcHtml(c)}${c.controller ? '<button type="button" class="btn btn-solid" data-open-controller>Open controller preview</button>' : ''}`;
   ttShow(c);
   if (opts.focus !== false && !opts.fromScene) ui.partBack.focus({ preventScroll: true });
 }
