@@ -1,0 +1,114 @@
+/* Hance Auditorium UCI, rebuilt for the web.
+   Class names and values are translated from "Davidson College - UCI Style Resource" (the Q-SYS
+   stylesheet attached to Hance UCI.uci). Q-SYS :value(1) states become .on here. All sizes are in
+   UCI pixels on a 1920 x 1200 stage that sim.js scales to fit. Base rules sit in :where() so the
+   stylesheet classes below win on source order, the way they do in Q-SYS. */
+.uci-screen{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:#F8FAFF;border-radius:6px;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.uci-stage{position:absolute;left:0;top:0;width:1920px;height:1200px;transform-origin:0 0;
+  font-family:'Inter',Arial,sans-serif;color:#0F1012;-webkit-font-smoothing:antialiased;background:#F8FAFF;line-height:1.2}
+.uci-layer{position:absolute;inset:0;pointer-events:none}
+.uci-stage :where(.u){position:absolute;box-sizing:border-box;margin:0;pointer-events:auto}
+.uci-stage .u[hidden],.uci-layer[hidden]{display:none!important}
+
+/* ---------- text blocks */
+.uci-stage :where(.t){display:flex;align-items:center;white-space:pre-line;line-height:1.22;pointer-events:none}
+.uci-stage :where(.t.ha0){justify-content:flex-start;text-align:left}
+.uci-stage :where(.t.ha1){justify-content:center;text-align:center}
+.uci-stage :where(.t.ha2){justify-content:flex-end;text-align:right}
+.uci-stage .textblockBodyDark{color:#0F1012;font-size:22px;font-weight:400}
+.uci-stage .textblockBodyGrey{color:#4D4D4D;font-size:22px;font-weight:400}
+.uci-stage .textblockHeadlineDark{color:#0F1012;font-size:36px;font-weight:700}
+.uci-stage .textblockHeadlineGrey{color:#4D4D4D;font-size:36px;font-weight:700}
+.uci-stage .textblockHeadlineLight{color:#FFFFFF;font-size:36px;font-weight:700}
+.uci-stage .textblockTitleGrey{color:#4D4D4D;font-size:22px;font-weight:700}
+.uci-stage .t.plain{font-weight:400;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+
+/* ---------- group boxes, backgrounds, logos */
+.uci-stage :where(.g){pointer-events:none}
+.uci-stage .backgroundoverlayRed{background:#D42121}
+.uci-stage .backgroundoverlayWhite{background:#FFFFFF;border-radius:10px}
+.uci-stage .header{background:#D42121}
+.uci-stage .card{border-radius:24px;border:1px solid #E9E9E9;background:#F5F5F5;box-shadow:0 4px 8px #E9E9E9}
+.uci-stage .logoDavidsonOnRed{background:url("icons/Logo_Davidson_Wordmark_OnRed.png") center/contain no-repeat}
+.uci-stage :where(img.u){display:block;pointer-events:none}
+
+/* ---------- buttons */
+.uci-stage :where(button.u){appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:center;gap:18px;
+  padding:0 10px;font:400 22px/1.15 'Inter',Arial,sans-serif;white-space:pre-line;text-align:center;cursor:pointer;
+  background:transparent;border:0;color:inherit;border-radius:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  transition:background-color .12s,color .12s,border-color .12s}
+.uci-stage button.u:focus{outline:none}
+.uci-stage button.u:focus-visible{outline:6px solid #294878;outline-offset:3px;z-index:9999}
+.uci-stage button.buttonNav:focus-visible,.uci-stage button.power:focus-visible,.uci-stage button.hotspot:focus-visible{outline-color:#FFFFFF}
+.uci-stage button.u svg{flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+
+.uci-stage .buttonprimary{border-radius:4px;border:2px solid #D9D9D9;background:#E3E3E3;color:#0F1012}
+.uci-stage .buttonprimary.on{background:#294878;border-color:transparent;color:#FFFFFF}
+.uci-stage .buttonSource,.uci-stage .buttonToggle{border-radius:8px;border:2px solid #D9D9D9;background:#E3E3E3;color:#0F1012}
+.uci-stage .buttonSource.on,.uci-stage .buttonToggle.on{background:#294878;border-color:transparent;color:#FFFFFF}
+.uci-stage .buttonprimaryRed{border-radius:8px;border:2px solid #D9D9D9;background:#D42121;color:#FFFFFF}
+.uci-stage .buttonprimaryRed.on{background:#FFA6A7;color:#0F1012}
+.uci-stage .buttonctaprimary{border-radius:8px;background:#E3E3E3;color:#0F1012;text-transform:capitalize}
+.uci-stage .buttonctaprimary.on{background:#294878;color:#FFFFFF}
+.uci-stage .buttonctaprimaryRed{border-radius:8px;background:#D42121;color:#FFFFFF;text-transform:capitalize}
+.uci-stage .buttonctaprimaryRed.on{filter:brightness(.86)}
+.uci-stage .buttonctasecondary{border-radius:8px;border:2px solid #D9D9D9;background:#E3E3E3;color:#0F1012}
+.uci-stage .buttonctasecondary.on{background:#294878;color:#FFFFFF}
+/* Nav: heavy white outline on the red header (sim.js insets the box by the stylesheet's 10px margin) */
+.uci-stage .buttonNav{border:7px solid #FFFFFF;border-radius:300px;background:transparent;color:#FFFFFF;padding:0}
+.uci-stage .buttonNav.on{background:#294878}
+.uci-stage .buttonblank{background:transparent;border:0;color:transparent}
+/* Chevron buttons: grey tile with the chevron artwork */
+.uci-stage .iconChevronUp,.uci-stage .iconChevronDown{border-radius:8px;border:2px solid #D9D9D9;background:#E3E3E3 center/62% no-repeat}
+.uci-stage .iconChevronUp{background-image:url("icons/Chevron_Up.png")}
+.uci-stage .iconChevronDown{background-image:url("icons/Chevron_Down.png")}
+.uci-stage .iconChevronUp.on,.uci-stage .iconChevronDown.on{background-color:#294878}
+/* Two-state image icons: value 0 = live, value 1 = muted, with the stylesheet's 8px margin around the art */
+.uci-stage .iconMicOnOffBlue,.uci-stage .iconSpeakerOnOffBlue{border-radius:3px;background:transparent center/calc(100% - 16px) no-repeat}
+.uci-stage .iconMicOnOffBlue{background-image:url("icons/Mic_On_Blue.png")}
+.uci-stage .iconMicOnOffBlue.on{background-image:url("icons/Mic_Off_Red.png")}
+.uci-stage .iconSpeakerOnOffBlue{background-image:url("icons/Speaker_On_Blue.png")}
+.uci-stage .iconSpeakerOnOffBlue.on{background-image:url("icons/Speaker_Off_Red.png")}
+/* System Off: icon and text together, transparent on the header (the stylesheet's .buttonPower look) */
+.uci-stage .power{color:#FFFFFF;font-size:26px;line-height:1.1;padding:24px;text-align:left}
+.uci-stage .power.on{background:rgba(255,255,255,.15)}
+/* Camera PTZ buttons sit on the preview: white glyphs, no fill until pressed */
+.uci-stage .ptz{color:#FFFFFF;border-radius:18px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}
+.uci-stage .ptz.on{background:rgba(255,255,255,.28)}
+.uci-stage .hotspot{background:transparent}
+.uci-stage button.hotspot:focus-visible{outline-offset:-12px}
+
+/* ---------- faders (fader-slot / fader-cap) */
+.uci-stage .f{cursor:pointer;touch-action:none;--p:.5}
+.uci-stage .f:focus{outline:none}
+.uci-stage .f:focus-visible{outline:6px solid #294878;outline-offset:4px;border-radius:12px}
+.uci-stage .f-slot{position:absolute;left:0;right:0;top:50%;height:20px;transform:translateY(-50%);background:#505050ce;
+  border:1px solid rgb(43,41,41);border-radius:10px;overflow:hidden}
+.uci-stage .f-fill{position:absolute;left:0;top:0;bottom:0;width:calc(16px + var(--p) * (100% - 32px));background:#294878}
+.uci-stage .f-cap{position:absolute;top:50%;left:calc(var(--p) * (100% - 32px));width:32px;height:32px;transform:translateY(-50%);
+  background:#e5e8eb;border:1px solid #888d97;border-radius:20%;box-sizing:border-box}
+
+/* ---------- meters (progress bars) */
+.uci-stage .m{background:rgb(204,204,204);border-radius:4px;overflow:hidden;pointer-events:none}
+.uci-stage .m.dark{background:rgb(65,65,65);border-radius:6px}
+.uci-stage .m i{position:absolute;left:0;top:0;bottom:0;width:0;background:rgb(191,12,38)}
+
+/* ---------- camera preview (usb_uvc media display) */
+.uci-stage .media{background:#000;overflow:hidden;pointer-events:none}
+.uci-stage .media canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.uci-stage .media .msg{position:absolute;inset:0;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;color:#B0ABAB;font-size:30px;text-align:center;padding:40px}
+.uci-stage .media .msg[hidden]{display:none}
+.uci-stage .media .tag{position:absolute;left:24px;bottom:20px;color:#fff;font-size:22px;font-weight:700;background:rgba(15,16,18,.62);padding:8px 14px;border-radius:8px}
+
+/* ---------- masks (touch blockers) */
+.uci-stage .mask{background:transparent;cursor:default}
+.uci-stage .mask.dim{background:rgba(0,0,0,.902)}
+
+/* ---------- simulation-only toast */
+.uci-toast{position:absolute;left:50%;bottom:44px;transform:translate(-50%,16px);width:max-content;max-width:1400px;background:rgba(15,16,18,.94);color:#fff;
+  font:400 26px/1.35 'Inter',Arial,sans-serif;padding:20px 32px;border-radius:18px;text-align:center;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;z-index:100000}
+.uci-toast.show{opacity:1;transform:translate(-50%,0)}
+.uci-toast b{font-weight:700}
+@media (prefers-reduced-motion: reduce){.uci-stage *,.uci-toast{transition:none!important}}

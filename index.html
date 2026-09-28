@@ -174,28 +174,57 @@ html.fs-lock,html.fs-lock body{overflow:hidden}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .d-none{margin:0;font-size:13px;color:var(--text-3);font-style:italic}
 
-/* controller drawer (fixed dark device look in both themes) */
-.tap{position:absolute;z-index:6;top:12px;right:12px;bottom:12px;width:min(440px,calc(100% - 24px));background:var(--tap-bg);color:var(--tap-text);border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.35);display:flex;flex-direction:column;overflow:auto;font-family:var(--sans)}
-.tap-top{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 18px;border-bottom:1px solid var(--tap-line)}
-.tap-room{font-weight:700;font-size:17px;flex:1}
-.tap-time{color:var(--tap-muted);font-size:15px;font-variant-numeric:tabular-nums}
-.tap-x{appearance:none;width:34px;height:34px;border-radius:50%;border:1px solid #3a3c42;background:transparent;color:#fff;font-size:18px;line-height:1;cursor:pointer}
-.tap-x:hover{background:#2a2c31}
-.tap-note{margin:12px 18px 0;padding:9px 11px;border:1px dashed #5b595b;border-radius:8px;font-size:12.5px;line-height:1.4;color:var(--tap-muted)}
-.tap-note b{color:#fff}
-.tap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:14px 18px 6px}
-.tap-tile{appearance:none;aspect-ratio:1/.88;border-radius:14px;background:var(--tap-tile);border:0;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;font:700 12px/1.2 var(--sans);text-align:center;padding:6px;cursor:not-allowed}
-.tap-tile.red{background:#D42121}
-.tap-ic{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}
-.tap-rows{padding:8px 18px 12px;display:grid;gap:10px}
-.tap-row{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:10px}
-.tap-row>span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tap-muted)}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{appearance:none;background:var(--tap-tile);border:1px solid #34363c;color:#fff;border-radius:999px;padding:6px 11px;font:400 12px/1.2 var(--sans);cursor:not-allowed}
-.chip.on{border-color:#D42121;box-shadow:inset 0 0 0 1px #D42121}
-.tap-vol{margin-top:auto;display:flex;align-items:center;gap:12px;padding:14px 18px;border-top:1px solid var(--tap-line);font-size:13px;color:var(--tap-muted)}
-.vol{flex:1;height:8px;border-radius:5px;background:#2E3036;position:relative}
-.vol b{position:absolute;left:0;top:0;bottom:0;width:62%;background:#fff;border-radius:5px}
+/* ctl:css:start */
+/* room controller: the Hance UCI sim lives in its own section and moves over the 3D viewer when opened from there */
+.section.ctl-sec{grid-template-columns:minmax(0,1fr);gap:34px}
+.ctl-sec .s-dek{max-width:62ch}
+.ctl{display:grid;gap:30px;min-width:0}
+.ctl-home{display:flex;flex-direction:column;align-items:center;min-width:0}
+.ctl-dev{width:100%;max-width:min(100%,calc((100vh - 150px) * 1.6 + 28px));min-width:0}
+.ctl-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px;min-height:34px}
+.ctl-name{flex:1;min-width:0;font:700 10.5px/1.25 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctl-tools{display:flex;gap:6px;flex:none}
+.ctl-btn{appearance:none;border:1px solid var(--line);background:var(--raised);padding:9px 12px;font:700 12px/1 var(--sans);color:var(--text);cursor:pointer;white-space:nowrap}
+.ctl-btn:hover{border-color:var(--text-3)}
+.ctl-x{width:34px;padding:0;height:32px;font-size:18px;line-height:1}
+.ctl-bezel{background:#0F1012;padding:14px;border-radius:20px;box-shadow:0 0 0 1px var(--line),0 22px 50px rgba(15,16,18,.2)}
+.ctl-screen{position:relative;width:100%;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#D42121}
+.ctl-load{position:absolute;inset:0;display:grid;place-items:center;padding:20px;text-align:center;color:#fff;font:700 14px/1.3 var(--sans)}
+.ctl-away{margin:0;width:100%;padding:48px 20px;border:1px dashed var(--line);text-align:center;color:var(--text-2);font:400 15.5px/1.5 var(--serif)}
+.ctl-link{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--accent-text);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ctl-side{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px 56px;align-items:start}
+.ctl-h{grid-column:1/-1;margin:0;font:700 10.5px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--text-3)}
+.ctl-state{margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px 24px}
+.ctl-state div{display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--line);padding-top:9px;min-width:0}
+.ctl-state dt{font:700 10px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.ctl-state dd{margin:0;font:400 15px/1.35 var(--serif);font-variant-numeric:tabular-nums}
+.ctl-notes p{margin:0 0 12px;font:400 14.5px/1.6 var(--serif);color:var(--text-2);max-width:56ch}
+.ctl-notes b{color:var(--text)}
+/* opened from the 3D viewer */
+.tap{position:absolute;z-index:6;inset:0;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(15,16,18,.46)}
+.tap .ctl-dev{max-width:none}
+.tap .ctl-bar{background:rgba(15,16,18,.82);padding:6px 6px 6px 14px;margin-bottom:8px}
+.tap .ctl-name{color:#D4CFCE}
+.tap .ctl-btn{background:#F9F5F2;color:#0F1012;border-color:transparent}
+.tap [data-ctl-full]{display:none}
+/* the panel on its own, full screen */
+.ctl-dev.is-full{position:fixed;inset:0;z-index:1001;width:100%!important;max-width:none;height:100%;margin:0;background:#0F1012;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:max(10px,env(safe-area-inset-top,0px)) max(10px,env(safe-area-inset-right,0px)) max(10px,env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px))}
+.ctl-dev.is-full>*{width:var(--fw,100%)}
+.ctl-dev.is-full .ctl-name{color:#B0ABAB}
+.ctl-dev.is-full .ctl-btn{background:#F9F5F2;color:#0F1012;border-color:transparent}
+.ctl-dev.is-full .ctl-bezel{padding:0;background:none;box-shadow:none}
+@media (max-width: 920px){
+  .ctl-side{grid-template-columns:1fr}
+  .ctl-dev{max-width:100%}
+}
+@media (max-width: 640px){
+  .ctl-bezel{padding:7px;border-radius:12px}
+  .ctl-btn{padding:8px 10px}
+  .ctl-name-x{display:none}
+  .ctl-state{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+}
+/* ctl:css:end */
 
 /* sections */
 .section{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px 72px;padding-block:84px;border-bottom:1px solid var(--line)}
@@ -213,10 +242,6 @@ html.fs-lock,html.fs-lock body{overflow:hidden}
 .shot img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
 .gallery figcaption{font-size:13px;color:var(--text-2);margin-top:9px;display:flex;justify-content:space-between;gap:10px}
 .gallery figcaption span{color:var(--text-3);font-variant-numeric:tabular-nums}
-.ctl-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px;align-items:center}
-.ctl-grid p{font:400 17px/1.6 var(--serif);margin:0 0 18px;max-width:52ch}
-.device{background:#0F1012;padding:14px;border-radius:18px;max-width:100%}
-.device img{display:block;width:100%;height:auto;border-radius:8px}
 .foot{padding-block:36px 56px;font-size:12.5px;color:var(--text-3);display:grid;gap:6px}
 .foot p{margin:0;max-width:110ch}
 dialog.lb{border:0;padding:0;background:transparent;max-width:94vw;max-height:92vh}
@@ -235,7 +260,6 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
   .pane{overflow:visible}
   .section{grid-template-columns:1fr;padding-block:60px}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ctl-grid{grid-template-columns:1fr}
 }
 @media (max-width: 640px){
   :root{--stage-h:clamp(360px,64vh,540px)}
@@ -445,7 +469,7 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
 
 <header class="masthead wrap">
   <div class="topbar">
@@ -495,7 +519,7 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
       <div class="tip" id="tip" hidden></div>
       <div class="loader" id="loader"><div class="box plate"><p id="loaderText">Loading the 3D model</p><div class="bar"><i id="loaderBar"></i></div></div></div>
       <div class="fallback" id="fallback" hidden><img src="renders/presentation.jpg" alt=""><p class="plate" id="fallbackText">The 3D model could not load in this browser. The renders further down show the same room.</p></div>
-      <aside class="tap" id="tapPanel" hidden aria-label="Room controller preview"></aside>
+      <aside class="tap" id="tapPanel" hidden aria-label="Room controller"></aside>
     </div>
 
     <div class="panel" id="panel">
@@ -507,7 +531,7 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
         <ul class="views" id="viewList"></ul>
         <div class="pane-foot">
           <p>Camera angles come from the Blender model, with each lens matched. The ceiling plan is drawn with a long lens.</p>
-          <button type="button" class="btn" id="btnCtl">Open room controller preview</button>
+          <button type="button" class="btn" id="btnCtl">Open room controller</button>
         </div>
       </div>
       <div class="pane" role="tabpanel" id="paneParts" aria-labelledby="tabParts" hidden>
@@ -713,19 +737,40 @@ dialog.lb button{appearance:none;background:#F9F5F2;color:#0F1012;border:0;paddi
     </div>
   </section>
 
-  <section class="section" id="controller" aria-labelledby="h-ctl">
+  <!-- ctl:start -->
+<section class="section ctl-sec" id="controller" aria-labelledby="h-ctl">
     <div>
-      <p class="eyebrow">Coming soon</p>
+      <p class="eyebrow">Try it</p>
       <h2 id="h-ctl">Room controller</h2>
+      <p class="s-dek">The Q-SYS control page that runs Hance Auditorium today, rebuilt from its UCI file. Tap the red screen to start the system.</p>
     </div>
-    <div class="ctl-grid">
-      <div>
-        <p>The Logitech Tap IP on the lectern runs the room: meetings, sharing, cameras, display routing and volume. This page will host an interactive version of that screen that drives the model above. For now the preview is static.</p>
-        <button type="button" class="btn btn-solid" id="btnCtl2">Open controller preview</button>
+    <div class="ctl">
+      <div class="ctl-home" id="ctlHome">
+        <div class="ctl-dev" id="ctlDev">
+          <div class="ctl-bar">
+            <span class="ctl-name">Hance Auditorium<span class="ctl-name-x"> · Q-SYS UCI, simulated</span></span>
+            <span class="ctl-tools">
+              <button type="button" class="ctl-btn" data-ctl-reset>Start over</button>
+              <button type="button" class="ctl-btn" data-ctl-full aria-pressed="false">Full screen</button>
+              <button type="button" class="ctl-btn ctl-x" data-ctl-close hidden aria-label="Close the room controller">×</button>
+            </span>
+          </div>
+          <div class="ctl-bezel"><div class="ctl-screen" id="ctlScreen"><div class="ctl-load">Loading the control page</div></div></div>
+        </div>
+        <p class="ctl-away" hidden>The controller is open in the 3D viewer above. <button type="button" class="ctl-link" data-ctl-back>Bring it back here</button></p>
       </div>
-      <div class="device"><img src="tex/tap_ui.webp" width="1024" height="640" alt="Mockup of the Tap IP home screen: Start Meeting, Join, Share Content, Cameras, Display Routing and Mic tiles with a room volume bar" loading="lazy"></div>
+      <div class="ctl-side">
+        <h3 class="ctl-h">What the room is doing</h3>
+        <dl class="ctl-state" id="ctlState"></dl>
+        <div class="ctl-notes">
+          <p>Everything on the panel comes from the Hance UCI file: the layout, the Davidson UCI style sheet, the labels and the Core control behind each button. Send a source to the projector and the screen in the 3D model follows. The Cameras page shows a live view from the model’s two Rally cameras.</p>
+          <p>A UCI file doesn’t carry the Core’s scripts, so this page approximates what they do. Warm-up times are shorter than the real thing, and the help buttons don’t send anything.</p>
+          <p><b>Tip:</b> tap <b>Hance Auditorium</b> in the header to switch between Simple and Advanced controls. Hold a camera preset for two seconds to save it.</p>
+        </div>
+      </div>
     </div>
   </section>
+  <!-- ctl:end -->
 
   <footer class="foot">
     <p>Chambers 2146 Sandbox · Davidson College Technology &amp; Innovation. Proposed design for discussion.</p>
@@ -889,7 +934,7 @@ async function main() {
   let gltf;
   [cams, smap, comps, gltf] = await Promise.all([getJSON('data/cameras.json'), getJSON('data/scene_map.json'), getJSON('data/components.json'), gltfP, texP]);
   root = gltf.scene; scene.add(root); root.updateMatrixWorld(true);
-  prepareScene();
+  prepareScene(); applyProjector(); applyScreen(true);
   buildViewList(); buildPartList(); wireUI();
   resize();
   const start = (location.hash || '').slice(1);
@@ -1120,7 +1165,7 @@ function updateVisibility() {
     ceil: p.y > ROOM.y1 - e, floor: p.y < ROOM.y0 };
   for (const n of nodes) {
     const md = META.get(n), i = md.info;
-    let v = !md.viewHidden && !cut[i.zone];
+    let v = !md.viewHidden && !md.ctlHidden && !cut[i.zone];
     if (rcpActive && i.furn) v = false;
     if (!i.keep && roomF <= 0.002) v = false;
     if (n.visible !== v) { n.visible = v; if (i.keep || i.zone === 'furn') shadowsDirty = true; }
@@ -1133,17 +1178,81 @@ function updateNearFar() {
 }
 
 /* ------------------------------------------------------------------ screens */
-function setScreenContent(mode) {
+/* ctl:screens:start */
+// The viewer's Presentation / Zoom switch and the room controller both drive the projector.
+// PROJ.on / PROJ.mute come from the controller (display power, Video Mute); screenMode picks the picture.
+const PROJ = { on: true, mute: false };
+const SCREEN_BLANK = 0xC4C0BA;          // matte screen under the room lights with no picture on it
+function applyProjector() {
+  if (!SM) return;
+  const z = screenMode === 'zoom';
+  if (PROJ.on && !PROJ.mute) { SM.proj.map = z ? T.zoom : T.slide; SM.proj.color.setScalar(z ? 1.0 : 0.95); }
+  else { SM.proj.map = null; SM.proj.color.set(SCREEN_BLANK); }
+  SM.proj.needsUpdate = true; needsRender = true;
+}
+function setScreenContent(mode, opts = {}) {
   screenMode = mode === 'zoom' ? 'zoom' : 'presentation';
   const z = screenMode === 'zoom';
-  SM.proj.map = z ? T.zoom : T.slide; SM.proj.color.setScalar(z ? 1.0 : 0.95);
-  SM.mac.map = z ? T.zoom : T.slide;
-  SM.annot.map = z ? T.zoom : T.annot;
-  for (const m of [SM.proj, SM.mac, SM.annot]) m.needsUpdate = true;
+  if (SM) {
+    SM.mac.map = z ? T.zoom : T.slide;
+    SM.annot.map = z ? T.zoom : T.annot;
+    SM.mac.needsUpdate = true; SM.annot.needsUpdate = true;
+  }
   ui.scrPres.setAttribute('aria-pressed', String(!z)); ui.scrZoom.setAttribute('aria-pressed', String(z));
-  needsRender = true;
+  if (!opts.fromController) {           // the viewer switch always puts a picture on the screen, and tells the controller
+    PROJ.on = true; PROJ.mute = false; setScreenDeployed(true);
+    window.dispatchEvent(new CustomEvent('c2146:screen', { detail: screenMode }));
+  }
+  applyProjector();
+}
+function setProjector(p = {}) {
+  if ('on' in p) PROJ.on = !!p.on;
+  if ('mute' in p) PROJ.mute = !!p.mute;
+  if (p.source && p.source !== screenMode) setScreenContent(p.source, { fromController: true });
+  else applyProjector();
 }
 
+// Motorized screen: rolls up into the ceiling housing about its top edge.
+let screenDown = true, screenK = 1, screenRaf = 0, SCR = null;
+const _sT = new THREE.Matrix4(), _sS = new THREE.Matrix4(), _sB = new THREE.Matrix4(), _sM = new THREE.Matrix4();
+function screenParts() {
+  if (SCR || !root) return SCR;
+  const fab = nodes.filter(n => n.userData.bn.startsWith('Projection_Screen_Deployed'));
+  const img = nodes.filter(n => n.userData.bn.startsWith('Projection_Screen_Image'));
+  if (!fab.length) return (SCR = { rest: null });
+  root.updateMatrixWorld(true);
+  const box = new THREE.Box3(); fab.forEach(n => box.expandByObject(n));
+  const rest = [...fab, ...img].map(n => ({ n, img: img.includes(n), world: n.matrixWorld.clone(),
+    parentInv: n.parent ? n.parent.matrixWorld.clone().invert() : new THREE.Matrix4() }));
+  return (SCR = { top: box.max.y, rest });
+}
+function applyScreenK(k) {
+  const P = screenParts(); if (!P || !P.rest) return;
+  _sT.makeTranslation(0, P.top, 0); _sS.makeScale(1, Math.max(0.002, k), 1); _sB.makeTranslation(0, -P.top, 0);
+  const W = _sT.clone().multiply(_sS).multiply(_sB);
+  for (const r of P.rest) {
+    _sM.copy(r.parentInv).multiply(W).multiply(r.world);
+    _sM.decompose(r.n.position, r.n.quaternion, r.n.scale);
+    META.get(r.n).ctlHidden = k < 0.01 || (r.img && !(screenDown && k >= 0.999));
+  }
+  needsRender = true;
+}
+function applyScreen(instant) {
+  const P = screenParts(); if (!P || !P.rest) return;
+  const target = screenDown ? 1 : 0;
+  cancelAnimationFrame(screenRaf);
+  if (instant || reduced()) { screenK = target; applyScreenK(screenK); shadowsDirty = true; return; }
+  const from = screenK, dur = 2400 * Math.abs(target - from); let t0 = null;
+  const step = t => {
+    if (t0 === null) t0 = t;
+    const p = Math.min(1, (t - t0) / Math.max(1, dur));
+    screenK = from + (target - from) * p; applyScreenK(screenK);
+    if (p < 1) screenRaf = requestAnimationFrame(step); else shadowsDirty = true;
+  };
+  screenRaf = requestAnimationFrame(step);
+}
+function setScreenDeployed(down) { down = !!down; if (down === screenDown) return; screenDown = down; applyScreen(); }
+/* ctl:screens:end */
 /* ------------------------------------------------------------------ picking + highlight */
 const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
 const HL = new THREE.Color('#D42121');
@@ -1222,7 +1331,7 @@ function selectComponent(id, opts = {}) {
   const imgs = c.images.length ? `<div class="pimgs">${c.images.map(i => `<img src="img/products/${i}.webp" alt="${esc(c.name)} product photo" loading="lazy" width="96" height="96">`).join('')}</div>` : '';
   ui.partBody.innerHTML = `<p class="eyebrow"${c.group === 'ceiling' ? ' style="color:var(--ceil)"' : ''}>${esc(GROUP_LABEL[c.group])}${c.qty ? ' · ' + c.qty + ' in the room' : ''}</p>
     <h3>${esc(c.name)}</h3><p class="d-model">${esc(c.maker)} · ${esc(c.model)}</p><p class="d-role">${esc(c.role)}</p>${specs}${imgs}
-    ${srcHtml(c)}${c.controller ? '<button type="button" class="btn btn-solid" data-open-controller>Open controller preview</button>' : ''}`;
+    ${srcHtml(c)}${c.controller ? '<button type="button" class="btn btn-solid" data-open-controller>Open room controller</button>' : ''}`;
   ttShow(c);
   if (opts.focus !== false && !opts.fromScene) ui.partBack.focus({ preventScroll: true });
 }
@@ -1244,7 +1353,6 @@ function wireUI() {
   ui.scrPres.addEventListener('click', () => setScreenContent('presentation'));
   ui.scrZoom.addEventListener('click', () => setScreenContent('zoom'));
   $('#btnCtl').addEventListener('click', openController);
-  $('#btnCtl2').addEventListener('click', () => { openController(); viewer.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'center' }); });
 
   // pointer: hover highlight, click to select (the Tap opens the controller when the lectern is assembled)
   let down = null, rafPending = false, last = null;
@@ -1258,7 +1366,7 @@ function wireUI() {
       canvas.style.cursor = c ? 'pointer' : '';
       if (c) {
         const r = viewer.getBoundingClientRect();
-        const hint = c.controller && !explodeTarget ? 'Click to open the controller preview' : 'Click for details';
+        const hint = c.controller && !explodeTarget ? 'Click to open the room controller' : 'Click for details';
         ui.tip.innerHTML = `${esc(c.name)}<small>${hint}</small>`;
         ui.tip.style.left = (last.clientX - r.left) + 'px'; ui.tip.style.top = (last.clientY - r.top) + 'px'; ui.tip.hidden = false;
       } else ui.tip.hidden = true;
@@ -1325,7 +1433,6 @@ function wireFullscreen() {
 function applyHash() {
   const h = (location.hash || '').slice(1);
   if (h === 'explode') setExplode(true);
-  else if (h === 'controller') openController();
   else if (h === 'components') setTab('parts');
   else if (VIEWS.some(v => v.id === h) && (!currentView || currentView.id !== h)) goToView(h);
 }
@@ -1388,75 +1495,153 @@ function ttShow(c) {
   ttResize(); TT.active = true;
 }
 
-/* ------------------------------------------------------------------ AV controller placeholder */
+/* ctl:js:start */
+/* ------------------------------------------------------------------ room controller */
 /**
- * mountAVController(container, sceneApi)
- * ---------------------------------------------------------------------------
- * PLACEHOLDER for the future interactive room-control UI, styled after the
- * Logitech Tap IP home screen (content/tap_ui.png / tap_ui.html). Every control
- * is inert today (aria-disabled); only Close works.
+ * The room controller is the Q-SYS control page from Hance Auditorium, rebuilt from its UCI file:
+ * uci/sim.js renders uci/hance.json (layers, positions and control bindings exported from the .uci)
+ * with the Davidson UCI style sheet. It lives in the Room controller section and moves over the 3D
+ * viewer when it's opened from there (Tap in the scene, the Views panel button, component details).
  *
- * Intended hooks when this gets built out. sceneApi is passed in so the
- * controller can drive the 3D room:
- *   sceneApi.setScreenContent('presentation' | 'zoom')   [works today]
- *       Start Meeting / Share Content: swap what the projector, laptop and
- *       annotation display show.
- *   sceneApi.goToView('rallya' | 'rallyb' | ...)          [works today]
- *       Cameras: preview what each Rally camera sees.
- *   sceneApi.pointCamera(id, { pan, tilt, zoom })         [stub]
- *       Aim a Rally PTZ: rotate its mesh and the matching POV camera.
- *   sceneApi.setVolume(level 0..1)                        [stub]
- *       Room volume: drive the readout and, later, a speaker highlight.
- *   sceneApi.setDisplayRoute(source, display)             [stub]
- *       Display Routing: the 6×1 route to the projector (E5200 -> D5000).
+ * sceneApi hooks the panel uses:
+ *   setProjector({ on, mute, source })   projector power and Video Mute blank the screen; source is 'presentation' | 'zoom'
+ *   setScreenDeployed(down)              Screen Up / Down rolls the motorized screen
+ *   cameraFeed()                         live render from a Rally camera, with pan, tilt and zoom, for the Cameras page
+ *   setVolume(level 0..1)                room volume (kept for a future speaker readout)
  * Returns { open(), close(), isOpen() }.
  */
-function mountAVController(container, sceneApi) {
-  const ic = p => `<span class="tap-ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">${p}</svg></span>`;
-  const tile = (label, path, red) => `<button type="button" class="tap-tile${red ? ' red' : ''}" aria-disabled="true" title="Coming soon">${ic(path)}${label}</button>`;
-  const chip = (label, on) => `<button type="button" class="chip${on ? ' on' : ''}" aria-disabled="true" title="Coming soon">${label}</button>`;
-  container.innerHTML = `
-    <div class="tap-top"><span class="tap-room">Chambers 2146</span><span class="tap-time" data-clock></span>
-      <button type="button" class="tap-x" data-close aria-label="Close controller preview">×</button></div>
-    <p class="tap-note"><b>Interactive controller coming soon.</b> This is a static preview of the Tap IP screen on the lectern. The buttons do nothing yet.</p>
-    <div class="tap-grid">
-      ${tile('Start Meeting', '<path d="M3 7h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3z" fill="#fff" stroke="none"/><path d="M16 11l5-3v8l-5-3z" fill="#fff" stroke="none"/>', true)}
-      ${tile('Join', '<path d="M12 5v14M5 12h14"/>')}
-      ${tile('Share Content', '<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M12 14V8m-3 3l3-3 3 3"/>')}
-      ${tile('Cameras', '<circle cx="12" cy="12" r="4"/><rect x="3" y="6" width="18" height="12" rx="3"/>')}
-      ${tile('Display Routing', '<rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/>')}
-      ${tile('Mic: Live', '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>')}
-    </div>
-    <div class="tap-rows">
-      <div class="tap-row"><span>Sources</span><div class="chips">${chip('Laptop (USB-C)', true)}${chip('Wireless share')}${chip('HDMI')}</div></div>
-      <div class="tap-row"><span>Cameras</span><div class="chips">${chip('Rally A · Students', true)}${chip('Rally B · Instructor')}</div></div>
-      <div class="tap-row"><span>Display</span><div class="chips">${chip('Projector', true)}${chip('Annotation display')}</div></div>
-    </div>
-    <div class="tap-vol"><span>Room volume</span><div class="vol" role="img" aria-label="Volume 62 percent"><b></b></div><span>62%</span></div>`;
-  const clock = container.querySelector('[data-clock]');
-  let timer = null, opener = null;
-  const tick = () => { clock.textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); };
+let FEED;
+function cameraFeed() {
+  if (FEED !== undefined) return FEED;
+  if (!root) return null;                          // model still loading; the panel asks again
+  try {
+    const cv = document.createElement('canvas');
+    const r = new THREE.WebGLRenderer({ canvas: cv, antialias: true, powerPreference: 'low-power' });
+    r.outputColorSpace = THREE.SRGBColorSpace; r.toneMapping = THREE.AgXToneMapping; r.toneMappingExposure = 1.1;
+    r.setPixelRatio(1); r.setClearColor(0x2a2a2c, 1);
+    const env = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+    const cam = new THREE.PerspectiveCamera(50, 16 / 9, 0.03, 60);
+    const base = {};
+    for (const id of ['rallya', 'rallyb']) {
+      const v = VIEWS.find(x => x.id === id), c = cams[v.cam];
+      const pos = new THREE.Vector3(...c.position), dir = new THREE.Vector3(...c.target).sub(pos).normalize();
+      base[id] = { v, pos, yaw: Math.atan2(-dir.x, -dir.z), pitch: Math.asin(clamp(dir.y, -1, 1)), tanV: ((c.sensor_width / 2) / c.lens) / (16 / 9) };
+    }
+    const saved = [];
+    FEED = {
+      canvas: cv,
+      render(id, ptz, w, h) {
+        const b = base[id]; if (!b) return;
+        w = clamp(w | 0, 320, 1600); h = clamp(h | 0, 180, 900);
+        if (cv.width !== w || cv.height !== h) r.setSize(w, h, false);
+        cam.aspect = w / h;
+        cam.fov = THREE.MathUtils.radToDeg(2 * Math.atan(b.tanV / (ptz.zoom || 1)));
+        cam.position.copy(b.pos);
+        cam.rotation.set(b.pitch + THREE.MathUtils.degToRad(ptz.tilt || 0), b.yaw + THREE.MathUtils.degToRad(ptz.pan || 0), 0, 'YXZ');
+        cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+        // seen from inside the room: no dollhouse cutaway, and the camera's own body is out of shot
+        saved.length = 0;
+        for (const n of nodes) {
+          saved.push(n.visible);
+          const md = META.get(n), i = md.info;
+          n.visible = !md.ctlHidden && !(b.v.hide && b.v.hide.some(p => n.userData.bn.startsWith(p))) && (i.keep || roomF > 0.002);
+        }
+        const env0 = scene.environment; scene.environment = env;
+        try { r.render(scene, cam); } finally {
+          scene.environment = env0;
+          nodes.forEach((n, k) => { n.visible = saved[k]; });
+        }
+      },
+    };
+  } catch (e) { console.warn('[controller] camera preview unavailable', e); FEED = null; }
+  return FEED;
+}
+
+function mountAVController(panel, sceneApi) {
+  const home = $('#ctlHome'), dev = $('#ctlDev'), screenEl = $('#ctlScreen'), away = home.querySelector('.ctl-away');
+  const bar = dev.querySelector('.ctl-bar'), btnClose = dev.querySelector('[data-ctl-close]');
+  const btnFull = dev.querySelector('[data-ctl-full]'), btnReset = dev.querySelector('[data-ctl-reset]');
+  let sim = null, opener = null, inPanel = false;
+  import('./uci/sim.js')
+    .then(m => m.mountUCISim(screenEl, { scene: sceneApi, status: $('#ctlState'), reduced }))
+    .then(s => { sim = s; window.__uciSim = s; size(); })
+    .catch(err => { console.error(err); screenEl.innerHTML = '<div class="ctl-load">The room controller could not load in this browser.</div>'; });
+
+  const fullOn = () => dev.classList.contains('is-full');
+  function size() {
+    const chrome = bar.offsetHeight + 10, bez = fullOn() ? 0 : 28;
+    if (fullOn()) {
+      const w = Math.min(dev.clientWidth - 20, (dev.clientHeight - 20 - chrome) * 1.6);
+      dev.style.setProperty('--fw', Math.max(240, Math.floor(w)) + 'px'); dev.style.width = '';
+    } else if (inPanel) {
+      const w = Math.min(panel.clientWidth - 24, (panel.clientHeight - 24 - chrome - bez) * 1.6 + bez);
+      dev.style.width = Math.max(260, Math.floor(w)) + 'px';
+    } else dev.style.width = '';
+    if (sim) sim.fit();
+  }
+  new ResizeObserver(size).observe(panel);
+  new ResizeObserver(size).observe(dev);
   function open() {
-    if (!container.hidden) return; opener = document.activeElement;
-    container.hidden = false; tick(); timer = setInterval(tick, 30000);
-    container.querySelector('[data-close]').focus({ preventScroll: true });
+    if (inPanel) return;
+    if (fullOn()) setFull(false);
+    if (viewer.clientWidth < 720 || viewer.clientHeight < 400) {       // too small to use over the model: go to the section
+      $('#controller').scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'start' });
+      return;
+    }
+    opener = document.activeElement;
+    away.hidden = false; panel.appendChild(dev); inPanel = true; panel.hidden = false; btnClose.hidden = false;
+    size(); btnClose.focus({ preventScroll: true });
   }
   function close() {
-    if (container.hidden) return; container.hidden = true; clearInterval(timer);
-    if (opener && opener.focus) opener.focus({ preventScroll: true });
+    if (!inPanel) return;
+    home.insertBefore(dev, away); inPanel = false; away.hidden = true; panel.hidden = true; btnClose.hidden = true;
+    size();
+    if (opener && opener.focus && document.contains(opener)) opener.focus({ preventScroll: true });
   }
-  container.addEventListener('click', e => { if (e.target.closest('[data-close]')) close(); });
-  container.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-  return { open, close, isOpen: () => !container.hidden };
+  btnClose.addEventListener('click', close);
+  home.querySelector('[data-ctl-back]').addEventListener('click', close);
+  panel.addEventListener('pointerdown', e => { if (e.target === panel) close(); });
+  panel.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  btnReset.addEventListener('click', () => { if (sim) sim.reset(); });
+
+  // Full screen for the panel on its own (Fullscreen API when allowed, fixed-position fallback otherwise)
+  const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const lock = on => { if (on || !$('#explore').classList.contains('css-full')) document.documentElement.classList.toggle('fs-lock', on); };
+  let native = false;
+  function setFull(on) {
+    if (!on && fsEl() === dev) { try { (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) { /* ignore */ } }
+    dev.classList.toggle('is-full', on);
+    if (!on) { native = false; lock(false); }
+    btnFull.setAttribute('aria-pressed', String(on)); btnFull.textContent = on ? 'Exit full screen' : 'Full screen';
+    requestAnimationFrame(size);
+  }
+  btnFull.addEventListener('click', () => {
+    if (fullOn()) { setFull(false); return; }
+    setFull(true);
+    const req = dev.requestFullscreen || dev.webkitRequestFullscreen, fallback = () => { if (!native) lock(true); };
+    if (!req) { fallback(); return; }
+    try { const p = req.call(dev, { navigationUI: 'hide' }); if (p && p.catch) p.catch(fallback); } catch (e) { fallback(); }
+  });
+  const onFs = () => {
+    if (fsEl() === dev) { native = true; lock(false); }
+    else if (native) { native = false; if (fullOn()) setFull(false); }
+    size();
+  };
+  document.addEventListener('fullscreenchange', onFs); document.addEventListener('webkitfullscreenchange', onFs);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && fullOn() && !native) setFull(false); });
+
+  return { open, close, isOpen: () => inPanel };
 }
-const notYet = name => () => console.info('[AV controller] ' + name + ' is not implemented yet');
+let volumeLevel = null;
 const sceneApi = {
   setScreenContent, getScreenContent: () => screenMode, goToView, views: VIEWS.map(v => v.id),
-  selectComponent, setExplode, pointCamera: notYet('pointCamera'), setVolume: notYet('setVolume'), setDisplayRoute: notYet('setDisplayRoute'),
+  selectComponent, setExplode, setProjector, setScreenDeployed, cameraFeed,
+  setVolume: v => { volumeLevel = v; }, getVolume: () => volumeLevel, ready: () => !!root,
 };
 const avController = mountAVController($('#tapPanel'), sceneApi);
 function openController() { avController.open(); }
-window.chambers2146 = sceneApi;   // handy for the future controller build-out and for debugging
+window.chambers2146 = sceneApi;   // handy for debugging
+/* ctl:js:end */
 
 /* ------------------------------------------------------------------ loop */
 let lastT = performance.now();
